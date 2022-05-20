@@ -3,23 +3,23 @@
   <div class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
-        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">About</h2>
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase text-center md:text-left">About</h2>
         <!-- <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">A better way to send money</p> -->
         <!-- <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p> -->
       </div>
 
       <div class="mt-10">
         <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          <div v-for="feature in features" :key="feature.name" class="relative">
+          <div v-for="skill in skills" :key="skill.name" class="relative">
             <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                <!-- <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" /> -->
-                <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" />
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
+                <!-- <component :is="skill.icon" class="h-6 w-6" aria-hidden="true" /> -->
+                <img class="h-8 lg:h-12" :src="skill.icon" />
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ feature.name }}</p>
+              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ skill.name }}</p>
             </dt>
             <dd class="mt-2 ml-16 text-base text-gray-500">
-              {{ feature.description }}
+              {{ skill.description }}
             </dd>
           </div>
         </dl>
@@ -29,32 +29,32 @@
 </template>
 
 <script setup>
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/vue/outline'
+// import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/vue/outline'
 
-const features = [
+const skills = [
   {
-    name: 'Competitive exchange rates',
+    name: 'Languages',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+      'HTML5, CSS3, JavaScript, ES6, Typescript',
+    icon: './src/assets/code.svg',
   },
   {
-    name: 'No hidden fees',
+    name: 'Libraries / Frameworks',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+      'Vue.js, Node.js, Express, GraphQL, gRPC, Bootstrap, TailwindCSS',
+    icon: './src/assets/book.svg',
+  },
+    {
+    name: 'Databases',
+    description:
+      'PostgreSQL, MongoDB',
+    icon: './src/assets/database.svg',
   },
   {
-    name: 'Transfers are instant',
+    name: 'Tools',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
-  },
-  {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
+      'Git, Firebase, Docker, Kubernetes, Helm, AWS, GCP, Snyk',
+    icon: './src/assets/tools.svg',
   },
 ]
 </script>
