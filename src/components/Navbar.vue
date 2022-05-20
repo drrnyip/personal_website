@@ -26,12 +26,13 @@
             </div>
           </div>
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white">
-            <span class="sr-only">View notifications</span>
-          <component :is="darkMode ? LightBulbIcon : LightBulbSolid" class="h-6 w-6" :class="{'text-yellow-300': !darkMode, 'text-white-100': darkMode}" @click="emitDarkMode"
-              aria-hidden="true" />
-          </button>
+        <div id="bulbcontainer" class="absolute right-0 items-center pr-2 h-fit" @click="emitDarkMode">
+            <span class="sr-only">Toggle dark mode</span>
+            <div id="switch" class="bg-gray-600"></div>
+            <img id="bulb" class="h-8 w-8 rotate-180" :src="darkMode ? 'src/assets/light_regular.svg' : 'src/assets/light_solid.svg'" aria-hidden="true" />
+            
+          <!-- <component :is="darkMode ? LightBulbIcon : LightBulbSolid" class="h-6 w-6" :class="{'text-yellow-300': !darkMode, 'text-white-100': darkMode}" @click="emitDarkMode"
+              aria-hidden="true" /> -->
         </div>
       </div>
     </div>
@@ -66,3 +67,33 @@ const navigation = [
 ]
 
 </script>
+
+<style scoped>
+#bulbcontainer {
+  /* background: lime; */
+  width: 50px;
+  height: 150px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 50;
+}
+
+#switch {
+  height: 125px;
+  width: 2px;
+  border-radius: 5px;
+  /* background: white; */
+  right: -20px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+#bulb {
+  position: relative;
+  right: -5px;
+  top: -3px;
+  cursor: pointer;
+}
+
+</style>
