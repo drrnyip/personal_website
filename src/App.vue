@@ -5,7 +5,7 @@
   <Divider :darkMode="darkMode"/>
   <About :darkMode="darkMode"/>
   <Divider :darkMode="darkMode"/>
-
+  <experience :darkMode="darkMode" />
 </template>
 
 
@@ -15,6 +15,7 @@ import Landing from './components/Landing.vue'
 import About from './components/About.vue'
 import Divider from './components/Divider.vue'
 import Lightbulb from './components/Lightbulb.vue';
+import Experience from './components/Experience.vue'
 
 import { ref } from "vue"
 let darkMode = ref(true);
