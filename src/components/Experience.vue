@@ -1,60 +1,27 @@
 <template>
-    <div class="flex justify-center">
-
-        <div class="w-full max-w-md px-2 py-16 sm:px-0">
-            <TabGroup>
-                <TabList class="flex w-full justify-between space-x-1 rounded-xl bg-blue-900/20 py-1">
-                    <Tab v-for="experience in experiences" :key="`${experience.title}_${experience.employer}`"
-                        v-slot="{ selected }">
-                        <button :class="[
-                            'w-full rounded-lg py-2.5 px-2.5 text-sm font-medium leading-5 text-blue-700',
-                            'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
-                            selected
-                                ? 'bg-white shadow'
-                                : 'text-blue-100 hover:bg-white/[0.12] hover:text-white',
-                        ]">
-                            {{ experience.employer }}
-                        </button>
-                    </Tab>
-                </TabList>
-
-                <TabPanels class="mt-2">
-                    <TabPanel v-for="experience in experiences" :key="`${experience.title}_${experience.employer}`"
-                        :class="[
-                            'rounded-xl bg-white p-3',
-                            'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400',
-                        ]">
-                        <h3 class="font-sans"><span class="text-blue-600 tracking-wider">{{ experience.title }}</span>
-                            <span> |</span> <span class="font-medium tracking-tighter">{{ experience.employer }}</span></h3>
-                        <ul>
-                            <li v-for="item in experience.description" :key="item.id"
-                                class=" list-item tracking-tight relative rounded-md px-3 py-2">
-                                <p class="text-sm leading-5">
-                                    {{ item }}
-                                </p>
-
-                                <!-- <ul class="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                                    <li>{{ post.date }}</li>
-                                    <li>&middot;</li>
-                                    <li>{{ post.commentCount }} comments</li>
-                                    <li>&middot;</li>
-                                    <li>{{ post.shareCount }} shares</li>
-                                </ul> -->
-                            </li>
-                        </ul>
-                    </TabPanel>
-                </TabPanels>
-            </TabGroup>
+    <div class="flex h-[400px] w-fit justify-around tablist mx-auto py-5">
+        <div class="flex flex-col left w-[300px] tracking-wide">
+            <ul class="border-l-4 mr-5 px-5">
+                <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
+                    class="box-border h-[60px] cursor-pointer font-sans py-4" @click="selected(experience, index)">
+                    {{ experience.employer }}
+                </li>
+            </ul>
+            <div id="elevator" class="absolute bg-red-300 h-[60px] w-1 transition-transform"
+                :style="{ transform: `translateY(${elevatorPosition})` }"></div>
         </div>
+        <div class="right w-[600px] bg-blue-300"></div>
     </div>
-
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
-const experiences = ref([
+let elevatorPosition = ref('0px');
+const elevatorHeight = 60;
+
+const experiences = [
     {
         title: "Developer",
         employer: "New York Stock Exchange",
@@ -85,7 +52,14 @@ const experiences = ref([
         ],
         date: '2017 - 2019',
     },
-])
+];
+
+let selectedExperience = ref(experiences[0]);
+
+function selected(exp, index) {
+    elevatorPosition.value = `${index * elevatorHeight}px`;
+    selectedExperience.value = experiences[index];
+}
 </script>
 
 <style scoped>
