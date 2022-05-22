@@ -1,20 +1,23 @@
 <template>
-    <div class="flex h-[400px] w-fit justify-around tablist mx-auto py-5">
-        <div class="flex flex-col left w-[300px] tracking-wide">
-            <ul class="border-l-4 mr-5 px-5">
+    <div
+        class="flex flex-col md:flex-row h-fit w-fit mx-8 md:mx-auto justify-around tablist py-5">
+        <div class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
+            <ul class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:px-5">
                 <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
-                    class="box-border h-[60px] cursor-pointer font-sans py-4" @click="selected(index)">
+                    class="box-border cursor-pointerfont-sans h-[60px] w-[150px] text-center md:text-left px-4 md:py-4" @click="selected(index)">
                     {{ experience.employer }}
                 </li>
             </ul>
-            <div id="elevator" class="absolute bg-red-300 h-[60px] w-1 transition-transform"
+            <div id="elevator" class="absolute hidden md:block bg-red-300 h-[60px] w-1 transition-transform"
                 :style="{ transform: `translateY(${elevatorPosition})` }"></div>
+            <div id="walkalator" class="absolute block md:hidden bg-red-300 w-[30vw] h-1 transition-transform"
+                :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
         </div>
-        <div class="flex flex-col right w-[600px] p-2">
+        <div class="flex flex-col h-[55vh] md:h-[45vh] md:h-fit w-fit md:w-[50vw] p-2">
             <h3 class="font-sans text-xl tracking-wider"><span>{{ selectedExperience.title }}</span> | <span
                     class="font-medium">{{ selectedExperience.employer }}</span></h3>
-                    <p class="italic">{{selectedExperience.date}}</p>
-                    <br />
+            <p class="italic">{{ selectedExperience.date }}</p>
+            <br />
             <ul class="">
                 <li v-for="desc in selectedExperience.description" :key="desc" class="list-item mb-2">{{ desc }}</li>
             </ul>
@@ -27,7 +30,11 @@ import { ref } from 'vue'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
 let elevatorPosition = ref('0px');
+let walkalatorPosition = ref('0vw');
+
 const elevatorHeight = 60;
+const walkalatorWidth = 30;
+
 
 const experiences = [
     {
@@ -66,6 +73,7 @@ let selectedExperience = ref(experiences[0]);
 
 function selected(index) {
     elevatorPosition.value = `${index * elevatorHeight}px`;
+    walkalatorPosition.value = `${index * walkalatorWidth}vw`;
     selectedExperience.value = experiences[index];
 }
 </script>
