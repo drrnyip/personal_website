@@ -3,14 +3,22 @@
         <div class="flex flex-col left w-[300px] tracking-wide">
             <ul class="border-l-4 mr-5 px-5">
                 <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
-                    class="box-border h-[60px] cursor-pointer font-sans py-4" @click="selected(experience, index)">
+                    class="box-border h-[60px] cursor-pointer font-sans py-4" @click="selected(index)">
                     {{ experience.employer }}
                 </li>
             </ul>
             <div id="elevator" class="absolute bg-red-300 h-[60px] w-1 transition-transform"
                 :style="{ transform: `translateY(${elevatorPosition})` }"></div>
         </div>
-        <div class="right w-[600px] bg-blue-300"></div>
+        <div class="flex flex-col right w-[600px] p-2">
+            <h3 class="font-sans text-xl tracking-wider"><span>{{ selectedExperience.title }}</span> | <span
+                    class="font-medium">{{ selectedExperience.employer }}</span></h3>
+                    <p class="italic">{{selectedExperience.date}}</p>
+                    <br />
+            <ul class="">
+                <li v-for="desc in selectedExperience.description" :key="desc" class="list-item mb-2">{{ desc }}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -56,7 +64,7 @@ const experiences = [
 
 let selectedExperience = ref(experiences[0]);
 
-function selected(exp, index) {
+function selected(index) {
     elevatorPosition.value = `${index * elevatorHeight}px`;
     selectedExperience.value = experiences[index];
 }
@@ -66,7 +74,6 @@ function selected(exp, index) {
 .list-item:before {
     content: "▸";
     position: absolute;
-    left: -5px;
-    top: 5px;
+    transform: translateX(-20px);
 }
 </style>
