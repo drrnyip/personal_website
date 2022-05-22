@@ -4,8 +4,8 @@
         <div class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
             <ul class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:px-5">
                 <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
-                    class="box-border cursor-pointerfont-sans h-[60px] w-[150px] text-center md:text-left px-4 md:py-4" @click="selected(index)">
-                    {{ experience.employer }}
+                    class="box-border cursor-pointerfont-sans h-[60px] w-[150px] md:w-full text-center md:text-left px-4 md:py-4" @click="selected(index)">
+                    <h3 class="font-sans">{{ experience.employer }}</h3>
                 </li>
             </ul>
             <div id="elevator" class="absolute hidden md:block bg-red-300 h-[60px] w-1 transition-transform"
@@ -14,7 +14,7 @@
                 :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
         </div>
         <br class="block md:hidden" />
-        <div class="flex flex-col h-[55vh] md:h-[45vh] md:h-fit w-fit md:w-[50vw] p-2">
+        <div class="flex flex-col h-[55vh] md:h-[50vh] md:h-fit w-fit md:w-[50vw] p-2">
             <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title }}</span> | <span
                     class="font-medium ml-2">{{ selectedExperience.employer }}</span></h3>
             <p class="italic">{{ selectedExperience.date }}</p>
