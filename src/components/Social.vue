@@ -10,6 +10,9 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  darkMode: Boolean
+})
 
 const icons = [
     {
@@ -60,15 +63,16 @@ const icons = [
 }
 
 .icon:hover {
-    animation: bounce 1s;
+    transform: translateY(-3px);
+    transition: all 0.1s ease-in;
+    /* animation: bounce 1s; */
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
     0%,
     20%,
-    50%,
-    80%,
-    100% {
+    50%
+    {
         transform: translateY(0);
     }
 
@@ -79,5 +83,9 @@ const icons = [
     60% {
         transform: translateY(-5px);
     }
-}
+
+    100% {
+        transform: translateY(-5px);
+    }
+} */
 </style>

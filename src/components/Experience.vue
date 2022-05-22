@@ -14,9 +14,9 @@
                         <h3 class="font-sans">{{ experience.employer }}</h3>
                     </li>
                 </ul>
-                <div id="elevator" class="absolute hidden md:block bg-red-300 h-[60px] w-1 transition-transform"
+                <div id="elevator" class="absolute hidden md:block bg-red-300 h-[60px] w-1 transition-transform duration-500 ease-in-out"
                     :style="{ transform: `translateY(${elevatorPosition})` }"></div>
-                <div id="walkalator" class="absolute block md:hidden bg-red-300 w-[30vw] h-1 transition-transform"
+                <div id="walkalator" class="absolute block md:hidden bg-red-300 w-[30vw] h-1 transition-transform duration-500 ease-in-out"
                     :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
             </div>
             <br class="block md:hidden" />
@@ -37,7 +37,10 @@
 
 <script setup>
 import { ref } from 'vue'
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+
+const props = defineProps({
+  darkMode: Boolean
+})
 
 let elevatorPosition = ref('0px');
 let walkalatorPosition = ref('0vw');
@@ -95,5 +98,6 @@ function selected(index) {
     content: "▸";
     position: absolute;
     transform: translateX(-20px);
+    transition: transform 1s ease-in-out;
 }
 </style>

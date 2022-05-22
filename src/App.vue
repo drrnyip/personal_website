@@ -5,7 +5,8 @@
   <Divider :darkMode="darkMode" />
   <Skills :darkMode="darkMode" />
   <experience :darkMode="darkMode" />
-  <Social />
+  <Social :darkMode="darkMode"/>
+  <!-- <Contact :darkMode="darkMode"/> -->
 </template>
 
 
@@ -17,6 +18,7 @@ import Divider from './components/Divider.vue'
 import Lightbulb from './components/Lightbulb.vue';
 import Experience from './components/Experience.vue'
 import Social from './components/Social.vue';
+import Contact from './components/Contact.vue';
 
 import { ref } from "vue"
 let darkMode = ref(true);

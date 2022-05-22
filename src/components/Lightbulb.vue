@@ -28,7 +28,7 @@ function emitDarkMode() {
     width: 10px;
     border-radius: 5px;
     background: pink;
-      position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
