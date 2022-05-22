@@ -15,8 +15,8 @@
         </div>
         <br class="block md:hidden" />
         <div class="flex flex-col h-[55vh] md:h-[45vh] md:h-fit w-fit md:w-[50vw] p-2">
-            <h3 class="font-sans text-xl tracking-wider"><span>{{ selectedExperience.title }}</span> | <span
-                    class="font-medium">{{ selectedExperience.employer }}</span></h3>
+            <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title }}</span> | <span
+                    class="font-medium ml-2">{{ selectedExperience.employer }}</span></h3>
             <p class="italic">{{ selectedExperience.date }}</p>
             <br />
             <ul class="">
