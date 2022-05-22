@@ -1,8 +1,8 @@
 <template>
-    <div
-        class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:right-16">
-        <a v-for="icon in icons" :key="icon.description" :alt="icon.description" :href="icon.href" class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
-            <img :src="icon.src" class="h-8 w-8" />
+    <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:right-16">
+        <a v-for="icon in icons" :key="icon.description" :alt="icon.description" :href="icon.href"
+            class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
+            <img :src="getSrc(icon.id)" class="h-8 w-8" />
         </a>
         <div id="vertical" class="hidden md:block"></div>
         <div id="horizontal" class="block md:hidden"></div>
@@ -11,26 +11,35 @@
 
 <script setup>
 const props = defineProps({
-  darkMode: Boolean
+    darkMode: Boolean
 })
 
 const icons = [
     {
+        id: "envelope",
         description: "Email",
-        src: "src/assets/envelope.svg",
         href: "mailto:drrnyip@gmail.com",
     },
     {
+        id: "github",
         description: "GitHub",
-        src: "src/assets/github.svg",
         href: "https://github.com/drrnyip",
     },
     {
+        id: "linkedin",
         description: "LinkedIn",
-        src: "src/assets/linkedin.svg",
         href: "https://www.linkedin.com/in/drrnyip/",
     },
 ]
+
+function getSrc(id) {
+    console.log(id);
+    if (props.darkMode) {
+        return `src/assets/${id}_yellow.svg`;
+    } else {
+        return `src/assets/${id}_gray.svg`;
+    }
+}
 </script>
 
 <style scoped>

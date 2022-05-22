@@ -1,5 +1,5 @@
 <template>
-  <Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
+  <Disclosure as="nav" class="bg-gray-50 dark:bg-gray-800" v-slot="{ open }">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -20,17 +20,18 @@
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href"
-                :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']"
-                :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <div v-for="item in navigation" :key="item.name" :href="item.href"
+                class='cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                :aria-current="item.current ? 'page' : undefined" @click="scrollTo(item.href)">{{ item.name }}</div>
             </div>
           </div>
         </div>
         <div id="bulbcontainer" class="absolute right-0 items-center pr-2 h-fit" @click="emitDarkMode">
-            <span class="sr-only">Toggle dark mode</span>
-            <div id="switch" class="bg-gray-600"></div>
-            <img id="bulb" class="h-8 w-8 rotate-180" :src="darkMode ? 'src/assets/light_regular.svg' : 'src/assets/light_solid.svg'" aria-hidden="true" />
-            
+          <span class="sr-only">Toggle dark mode</span>
+          <div id="switch" class="bg-gray-600"></div>
+          <img id="bulb" class="h-8 w-8 rotate-180"
+            :src="darkMode ? 'src/assets/light_regular.svg' : 'src/assets/light_solid.svg'" aria-hidden="true" />
+
           <!-- <component :is="darkMode ? LightBulbIcon : LightBulbSolid" class="h-6 w-6" :class="{'text-yellow-300': !darkMode, 'text-white-100': darkMode}" @click="emitDarkMode"
               aria-hidden="true" /> -->
         </div>
@@ -61,10 +62,15 @@ function emitDarkMode() {
 }
 
 const navigation = [
-  { name: 'About', href: '#', current: true },
-  { name: 'Experience', href: '#', current: false },
+  { name: 'About', href: 'about', current: true },
+  { name: 'Experience', href: 'experience', current: false },
   { name: 'Contact', href: '#', current: false },
 ]
+
+function scrollTo(target) {
+  console.log("SCROLLING: " + target);
+  document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+}
 
 </script>
 
@@ -94,5 +100,4 @@ const navigation = [
   top: -3px;
   cursor: pointer;
 }
-
 </style>
