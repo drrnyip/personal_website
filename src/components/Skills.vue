@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="py-12 bg-white md:mx-24 lg:mx-36">
-    <div class="max-w-7xl mx-auto px-4 md:px-0">
+    <div class="max-w-7xl px-4 md:px-0">
       <div class="lg:text-center">
         <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase text-center md:text-left">Skills</h2>
         <!-- <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">A better way to send money</p> -->

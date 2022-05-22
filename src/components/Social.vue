@@ -14,7 +14,7 @@
 const icons = [
     {
         description: "Email",
-        src: "src/assets/at.svg",
+        src: "src/assets/envelope.svg",
         href: "mailto:drrnyip@gmail.com",
     },
     {
