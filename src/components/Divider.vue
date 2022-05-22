@@ -1,5 +1,5 @@
 <template>
-  <hr class="divider h-4 w-screen bg-gradient-to-br from-green-400 to-blue-400" />
+  <hr class="divider h-4 w-full bg-gradient-to-br from-green-400 to-blue-400" />
 </template>
 
 <script setup>

@@ -17,6 +17,7 @@
                         <span
                             class="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-cyan-500 xl:inline">I
                             build stuff</span>
+                        <br />
                         <span
                             class="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-cyan-400 to-blue-300 xl:inline">on
                             the internet</span>

@@ -82,7 +82,6 @@ const navigation = [
   height: 125px;
   width: 2px;
   border-radius: 5px;
-  /* background: white; */
   right: -20px;
   position: relative;
   cursor: pointer;
