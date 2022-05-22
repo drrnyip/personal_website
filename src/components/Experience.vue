@@ -24,9 +24,11 @@
                             'rounded-xl bg-white p-3',
                             'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400',
                         ]">
-                        <h3 class="font-mono"><span class="text-blue-600 font-mono tracking-wider">{{experience.title}}</span> <span>|</span> <span class="tracking-tighter">{{experience.employer}}</span></h3>
+                        <h3 class="font-sans"><span class="text-blue-600 tracking-wider">{{ experience.title }}</span>
+                            <span> |</span> <span class="font-medium tracking-tighter">{{ experience.employer }}</span></h3>
                         <ul>
-                            <li v-for="item in experience.description" :key="item.id" class="font-mono list-item tracking-tight relative rounded-md p-3">
+                            <li v-for="item in experience.description" :key="item.id"
+                                class=" list-item tracking-tight relative rounded-md px-3 py-2">
                                 <p class="text-sm leading-5">
                                     {{ item }}
                                 </p>
@@ -91,6 +93,6 @@ const experiences = ref([
     content: "▸";
     position: absolute;
     left: -5px;
-    top: 9px;
+    top: 5px;
 }
 </style>

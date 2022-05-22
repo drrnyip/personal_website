@@ -1,6 +1,6 @@
 <template>
     <div class="relative min-h-screen overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mt-[200px] mb-auto mx-auto">
             <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                 <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
                     fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -8,20 +8,23 @@
                 </svg>
 
 
-                <main class="mt-24 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:mt-28">
-                    <div class="text-center lg:text-left">
-                        <h1 class="text-2xl tracking-tight font-normal text-gray-900 sm:text-3xl md:text-5xl">
-                            <span class="xl:inline">Hi! I'm Darren</span>
-                        </h1>
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-cyan-500 xl:inline">I build stuff on the internet</span>
-                        </h1>
-                        <p
-                            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            <!-- I'm a fullstack software developer who's based on the US East Coast. -->
-                        </p>
-
-                    </div>
+                <main
+                    class="text-left mt-24 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:mt-28">
+                    <h1 class="text-2xl tracking-tighter font-normal text-gray-900 sm:text-3xl md:text-4xl">
+                        <span class="xl:inline">Hi! I'm Darren Yip</span>
+                    </h1>
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span
+                            class="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-cyan-500 xl:inline">I
+                            build stuff</span>
+                        <span
+                            class="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-cyan-400 to-blue-300 xl:inline">on
+                            the internet</span>
+                    </h1>
+                    <p
+                        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        <!-- I'm a fullstack software developer who's based on the US East Coast. -->
+                    </p>
                 </main>
             </div>
         </div>
@@ -38,7 +41,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const props = defineProps({
-  darkMode: Boolean
+    darkMode: Boolean
 })
 
 const navigation = [
