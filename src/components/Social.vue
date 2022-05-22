@@ -1,7 +1,7 @@
 <template>
     <div
         class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:right-16">
-        <a v-for="icon in icons" :key="icon.description" :alt="icon.description" :href="icon.href" class="icon mb-4 mx-4 md:mx-0" target="_blank">
+        <a v-for="icon in icons" :key="icon.description" :alt="icon.description" :href="icon.href" class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
             <img :src="icon.src" class="h-8 w-8" />
         </a>
         <div id="vertical" class="hidden md:block"></div>
