@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex flex-col md:flex-row h-fit w-fit mx-8 md:mx-auto justify-around tablist py-5">
+        class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-auto justify-around tablist py-5">
         <div class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
             <ul class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:px-5">
                 <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
@@ -13,6 +13,7 @@
             <div id="walkalator" class="absolute block md:hidden bg-red-300 w-[30vw] h-1 transition-transform"
                 :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
         </div>
+        <br class="block md:hidden" />
         <div class="flex flex-col h-[55vh] md:h-[45vh] md:h-fit w-fit md:w-[50vw] p-2">
             <h3 class="font-sans text-xl tracking-wider"><span>{{ selectedExperience.title }}</span> | <span
                     class="font-medium">{{ selectedExperience.employer }}</span></h3>
