@@ -6,9 +6,10 @@
         <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-auto justify-around tablist py-5">
             <div class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
                 <ul
-                    class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:px-5">
+                    class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:pr-5">
                     <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
-                        class="box-border cursor-pointerfont-sans h-[60px] w-[150px] md:w-full text-center md:text-left px-4 md:py-4"
+                        class="box-border cursor-pointerfont-sans h-[60px] w-full text-center md:text-left pt-2 px-4 md:py-4"
+                        :class="{'bg-gray-100': selectedIndex == index}"
                         @click="selected(index)">
                         <h3 class="font-sans">{{ experience.employer }}</h3>
                     </li>
@@ -79,11 +80,13 @@ const experiences = [
 ];
 
 let selectedExperience = ref(experiences[0]);
+let selectedIndex = ref(0);
 
 function selected(index) {
     elevatorPosition.value = `${index * elevatorHeight}px`;
     walkalatorPosition.value = `${index * walkalatorWidth}vw`;
     selectedExperience.value = experiences[index];
+    selectedIndex.value = index;
 }
 </script>
 
