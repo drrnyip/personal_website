@@ -2,11 +2,12 @@
   <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" />
   <!-- <lightbulb /> -->
   <Landing :darkMode="darkMode" />
+  <About :darkMode="darkMode" />
   <!-- <Divider :darkMode="darkMode" /> -->
   <Skills :darkMode="darkMode" />
   <experience :darkMode="darkMode" />
+  <Contact :darkMode="darkMode"/>
   <Social :darkMode="darkMode" />
-  <!-- <Contact :darkMode="darkMode"/> -->
 </template>
 
 
@@ -20,6 +21,7 @@ import Lightbulb from './components/Lightbulb.vue';
 import Experience from './components/Experience.vue'
 import Social from './components/Social.vue';
 import Contact from './components/Contact.vue';
+import About from './components/About.vue';
 
 let darkMode = ref(true);
 

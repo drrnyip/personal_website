@@ -20,7 +20,7 @@
             <div class="flex space-x-4">
               <div v-for="item in navigation" :key="item.name" :href="item.href"
                 class='cursor-pointer text-gray-800 dark:text-gray-50 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                :aria-current="item.current ? 'page' : undefined" @click="scrollTo(item.href)">{{ item.name }}</div>
+                :aria-current="item.current ? 'page' : undefined" @click="scrollTo($event, item.href)">{{ item.name }}</div>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
       <div class="px-2 pt-2 pb-3 space-y-1">
         <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
           :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']"
-          :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+          :aria-current="item.current ? 'page' : undefined" @click="scrollTo($event, item.href)">{{ item.name }}</DisclosureButton>
       </div>
     </DisclosurePanel>
   </Disclosure>
@@ -63,10 +63,11 @@ function emitDarkMode() {
 const navigation = [
   { name: 'About', href: 'about', current: true },
   { name: 'Experience', href: 'experience', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Contact', href: 'contact', current: false },
 ]
 
-function scrollTo(target) {
+function scrollTo(event, target) {
+  event.preventDefault();
   document.getElementById(target).scrollIntoView({ behavior: "smooth" });
 }
 
