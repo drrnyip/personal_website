@@ -1,12 +1,22 @@
 <template>
-  <Navbar :darkMode="darkMode"/>
+  <Navbar :darkMode="darkMode" />
   <Lightbulb :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" />
-  <Landing :darkMode="darkMode" />
-  <About :darkMode="darkMode" />
+  <aos-vue animation="fade-in" :once="true" :duration="1500">
+    <Landing :darkMode="darkMode" />
+  </aos-vue>
+  <aos-vue animation="fade-in" :once="true">
+    <About :darkMode="darkMode" />
+  </aos-vue>
   <!-- <Divider :darkMode="darkMode" /> -->
-  <Skills :darkMode="darkMode" />
-  <experience :darkMode="darkMode" />
-  <Contact :darkMode="darkMode"/>
+  <aos-vue animation="fade-in" :once="true">
+
+    <Skills :darkMode="darkMode" />
+  </aos-vue>
+  <aos-vue animation="fade-in" :once="true">
+
+    <experience :darkMode="darkMode" />
+  </aos-vue>
+  <Contact :darkMode="darkMode" />
   <Social :darkMode="darkMode" />
 </template>
 
