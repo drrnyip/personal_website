@@ -1,9 +1,8 @@
 <template>
     <div id="experience" class="py-12 bg-gray-100 dark:bg-gray-800 md:mx-24 lg:mx-36 text-gray-800 dark:text-gray-50">
         <h2
-            class="text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4">
+            class="text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
             Where I've Worked</h2>
-        <!-- <h2 class="text-base text-red-700 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left mb-4">Where I've Worked</h2> -->
         <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-0 justify-around tablist py-5">
             <div class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
                 <ul
