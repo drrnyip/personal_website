@@ -1,20 +1,8 @@
 <template>
     <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:right-16">
-        <a alt="Email" href="mailto:drrnyip@gmail.com"
+        <a v-for="icon in icons" :key="icon.id" :alt="icon.id" :href="icon.href"
             class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
-            <img v-if="darkMode" src="../assets/envelope_yellow.svg" class="h-8 w-8" />
-            <img v-if="!darkMode" src="../assets/envelope_gray.svg" class="h-8 w-8" />
-        </a>
-        <a alt="GitHub" href="https://github.com/drrnyip"
-            class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
-            <img v-if="darkMode" src="../assets/github_yellow.svg" class="h-8 w-8" />
-            <img v-if="!darkMode" src="../assets/github_gray.svg" class="h-8 w-8" />
-
-        </a>
-        <a alt="LinkedIn" href="https://www.linkedin.com/in/drrnyip"
-            class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
-            <img v-if="darkMode" src="../assets/linkedin_yellow.svg" class="h-8 w-8" />
-            <img v-if="!darkMode" src="../assets/linkedin_gray.svg" class="h-8 w-8" />
+            <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-8 w-8" />
         </a>
         <div id="vertical" class="hidden md:block"></div>
         <div id="horizontal" class="block md:hidden"></div>
@@ -22,6 +10,13 @@
 </template>
 
 <script setup>
+import envelopeDark from "../assets/envelope_yellow.svg"
+import envelopeLight from "../assets/envelope_gray.svg"
+import githubDark from "../assets/github_yellow.svg"
+import githubLight from "../assets/github_gray.svg"
+import linkedinDark from "../assets/linkedin_yellow.svg"
+import linkedinLight from "../assets/linkedin_gray.svg"
+
 const props = defineProps({
     darkMode: Boolean
 })
@@ -31,16 +26,22 @@ const icons = [
         id: "envelope",
         description: "Email",
         href: "mailto:drrnyip@gmail.com",
+        lightImg: envelopeLight,
+        darkImg: envelopeDark,
     },
     {
         id: "github",
         description: "GitHub",
         href: "https://github.com/drrnyip",
+        lightImg: githubLight,
+        darkImg: githubDark,
     },
     {
         id: "linkedin",
         description: "LinkedIn",
         href: "https://www.linkedin.com/in/drrnyip/",
+        lightImg: linkedinLight,
+        darkImg: linkedinDark,
     },
 ]
 

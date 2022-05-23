@@ -27,8 +27,7 @@
         <div id="bulbcontainer" class="absolute right-0 items-center pr-2 h-fit" @click="emitDarkMode">
           <span class="sr-only">Toggle dark mode</span>
           <div id="switch" class="bg-gray-600"></div>
-          <img v-if="darkMode" id="bulb" class="h-8 w-8 rotate-180" src="../assets/light_regular.svg" aria-hidden="true" />
-          <img v-if="!darkMode" id="bulb" class="h-8 w-8 rotate-180" src="../assets/light_solid.svg" aria-hidden="true" />
+          <img id="bulb" class="h-8 w-8 rotate-180" :src="darkMode ? lightRegular : lightSolid" aria-hidden="true" />
 
           <!-- <component :is="darkMode ? LightBulbIcon : LightBulbSolid" class="h-6 w-6" :class="{'text-yellow-300': !darkMode, 'text-white-100': darkMode}" @click="emitDarkMode"
               aria-hidden="true" /> -->
@@ -49,6 +48,8 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { LightBulbIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { LightBulbIcon as LightBulbSolid } from '@heroicons/vue/solid'
+import lightRegular from "../assets/light_regular.svg";
+import lightSolid from "../assets/light_solid.svg";
 
 const props = defineProps({
   darkMode: Boolean
@@ -66,7 +67,6 @@ const navigation = [
 ]
 
 function scrollTo(target) {
-  console.log("SCROLLING: " + target);
   document.getElementById(target).scrollIntoView({ behavior: "smooth" });
 }
 

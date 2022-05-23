@@ -16,7 +16,7 @@
           <div v-for="skill in skills" :key="skill.name" class="relative basis-1/2 mt-4 mx-2 md:mx-0">
             <dt>
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
-                <img class="h-8 lg:h-12" :src="getSrc(skill.id)" />
+                <img class="h-8 lg:h-12" :src="darkMode ? skill.darkImg : skill.lightImg" />
               </div>
               <p class="ml-16 text-lg leading-6 font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
             </dt>
@@ -31,6 +31,15 @@
 </template>
 
 <script setup>
+import codeDark from "../assets/code_yellow.svg"
+import codeLight from "../assets/code_gray.svg"
+import bookDark from "../assets/book_yellow.svg"
+import bookLight from "../assets/book_gray.svg"
+import databaseDark from "../assets/database_yellow.svg"
+import databaseLight from "../assets/database_gray.svg"
+import toolsDark from "../assets/tools_yellow.svg"
+import toolsLight from "../assets/tools_gray.svg"
+
 const props = defineProps({
   darkMode: Boolean
 })
@@ -40,33 +49,32 @@ const skills = [
     description:
       'HTML5, CSS3, JavaScript, ES6, Typescript',
     id: 'code',
+    lightImg: codeLight,
+    darkImg: codeDark,
   },
   {
     name: 'Libraries / Frameworks',
     description:
       'Vue.js, Node.js, Express, GraphQL, gRPC, Bootstrap, TailwindCSS',
     id: 'book',
+    lightImg: bookLight,
+    darkImg: bookDark,
   },
   {
     name: 'Databases',
     description:
       'PostgreSQL, MongoDB',
     id: 'database',
+    lightImg: databaseLight,
+    darkImg: databaseDark,
   },
   {
     name: 'Tools',
     description:
       'Git, Firebase, Docker, Kubernetes, Helm, AWS, GCP, Snyk',
     id: 'tools',
+    lightImg: toolsLight,
+    darkImg: toolsDark,
   },
 ]
-
-function getSrc(name) {
-  if (props.darkMode) {
-    return `../src/assets/${name}_yellow.svg`
-  } else {
-    return `../src/assets/${name}_gray.svg`
-
-  }
-}
 </script>
