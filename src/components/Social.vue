@@ -1,8 +1,20 @@
 <template>
     <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:right-16">
-        <a v-for="icon in icons" :key="icon.description" :alt="icon.description" :href="icon.href"
+        <a alt="Email" href="mailto:drrnyip@gmail.com"
             class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
-            <img :src="getSrc(icon.id)" class="h-8 w-8" />
+            <img v-if="darkMode" src="../assets/envelope_yellow.svg" class="h-8 w-8" />
+            <img v-if="!darkMode" src="../assets/envelope_gray.svg" class="h-8 w-8" />
+        </a>
+        <a alt="GitHub" href="https://github.com/drrnyip"
+            class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
+            <img v-if="darkMode" src="../assets/github_yellow.svg" class="h-8 w-8" />
+            <img v-if="!darkMode" src="../assets/github_gray.svg" class="h-8 w-8" />
+
+        </a>
+        <a alt="LinkedIn" href="https://www.linkedin.com/in/drrnyip"
+            class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
+            <img v-if="darkMode" src="../assets/linkedin_yellow.svg" class="h-8 w-8" />
+            <img v-if="!darkMode" src="../assets/linkedin_gray.svg" class="h-8 w-8" />
         </a>
         <div id="vertical" class="hidden md:block"></div>
         <div id="horizontal" class="block md:hidden"></div>
@@ -33,11 +45,10 @@ const icons = [
 ]
 
 function getSrc(id) {
-    console.log(id);
     if (props.darkMode) {
-        return `src/assets/${id}_yellow.svg`;
+        return new URL(`../assets/${id}_yellow.svg`).href;
     } else {
-        return `src/assets/${id}_gray.svg`;
+        return new URL(`../assets/${id}_gray.svg`).href;
     }
 }
 </script>
