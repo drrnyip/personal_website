@@ -63,9 +63,9 @@ const skills = [
 
 function getSrc(name) {
   if (props.darkMode) {
-    return `/src/assets/${name}_yellow.svg`
+    return `../src/assets/${name}_yellow.svg`
   } else {
-    return `/src/assets/${name}_gray.svg`
+    return `../src/assets/${name}_gray.svg`
 
   }
 }

@@ -13,10 +13,10 @@
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <img class="block lg:hidden h-10 w-auto" src="/src/assets/logo.png"
+            <img class="block lg:hidden h-10 w-auto" src="../assets/logo.png"
               alt="Darren Yip" />
             <img class="hidden lg:block h-10 w-auto"
-              src="/src/assets/logo.png" alt="Darren Yip" />
+              src="../assets/logo.png" alt="Darren Yip" />
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
@@ -30,7 +30,7 @@
           <span class="sr-only">Toggle dark mode</span>
           <div id="switch" class="bg-gray-600"></div>
           <img id="bulb" class="h-8 w-8 rotate-180"
-            :src="darkMode ? '/src/assets/light_regular.svg' : '/src/assets/light_solid.svg'" aria-hidden="true" />
+            :src="darkMode ? '../src/assets/light_regular.svg' : '../src/assets/light_solid.svg'" aria-hidden="true" />
 
           <!-- <component :is="darkMode ? LightBulbIcon : LightBulbSolid" class="h-6 w-6" :class="{'text-yellow-300': !darkMode, 'text-white-100': darkMode}" @click="emitDarkMode"
               aria-hidden="true" /> -->
