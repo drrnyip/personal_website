@@ -4,13 +4,22 @@
             class="text-base text-red-700 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left">
             About me</h2>
         <div class="flex flex-col md:flex-row my-10">
-            <img src="../assets/logo.png" class="cover mx-auto md:mr-8 h-48 w-48 mt-2 ring-2 ring-red-700 dark:ring-yellow-500 rounded-full" />
-
-            <div class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
+            <img src="../assets/logo.png"
+                class="cover m-auto md:mr-8 h-48 w-48 ring-2 ring-red-700 dark:ring-yellow-500 rounded-full" />
+            <div
+                class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                 <p>
                     Hi there, my name is Darren Yip, and I'm a software engineer based in New Haven, Connecticut.
                 </p>
                 <br />
+                <p>
+                    I've been building web applications since 2015, working for <a href="https://www.checkmate.digital"
+                        class="underline" target="_blank">smaller startups</a> to <a class="underline"
+                        href="https://www.nyse.com/index" target="_blank">large corporations</a>. My interest lies in
+                    creating engaging, memorable digital experiences for users.
+                </p>
+                <br />
+                <p>When not in front of a computer, you can usually find me in front of a piano, or with my nose in a book.</p>
             </div>
         </div>
     </div>
