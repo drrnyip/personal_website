@@ -19,8 +19,9 @@
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
               <div v-for="item in navigation" :key="item.name" :href="item.href"
-                class='cursor-pointer text-gray-800 dark:text-gray-50 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                :aria-current="item.current ? 'page' : undefined" @click="scrollTo($event, item.href)">{{ item.name }}</div>
+                class='cursor-pointer text-gray-800 dark:text-gray-50 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-sans tracking-wide font-medium'
+                :aria-current="item.current ? 'page' : undefined" @click="scrollTo($event, item.href)">{{ item.name }}
+              </div>
             </div>
           </div>
         </div>
@@ -38,8 +39,9 @@
     <DisclosurePanel class="sm:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
-          :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']"
-          :aria-current="item.current ? 'page' : undefined" @click="scrollTo($event, item.href)">{{ item.name }}</DisclosureButton>
+          class="text-gray-800 dark:text-gray-50 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          @click="scrollTo($event, item.href)">{{ item.name }}
+        </DisclosureButton>
       </div>
     </DisclosurePanel>
   </Disclosure>
