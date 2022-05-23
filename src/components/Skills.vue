@@ -1,10 +1,10 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div id="skills" class="py-12 bg-gray-50 dark:bg-gray-800 md:mx-24 lg:mx-36">
+  <div id="skills" class="py-12 bg-gray-100 dark:bg-gray-800 md:mx-24 lg:mx-36">
     <div class="max-w-7xl px-4 md:px-0">
       <div class="lg:text-center">
         <h2
-          class="text-base text-gray-800 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left">
+          class="text-base text-gray-800 dark:text-red-500 font-semibold tracking-wide uppercase text-center md:text-left">
           Skills</h2>
         <!-- <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">A better way to send money</p> -->
         <!-- <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p> -->
@@ -18,9 +18,9 @@
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
                 <img class="h-8 lg:h-12" :src="getSrc(skill.id)" />
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-yellow-500 dark:text-gray-50">{{ skill.name }}</p>
+              <p class="ml-16 text-lg leading-6 font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
             </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-800 dark:text-yellow-500 ">
+            <dd class="mt-2 ml-16 text-base text-gray-800 dark:text-gray-50 ">
               {{ skill.description }}
             </dd>
           </div>
