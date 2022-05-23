@@ -1,26 +1,26 @@
 <template>
     <div id="experience" class="py-12 bg-gray-100 dark:bg-gray-800 md:mx-24 lg:mx-36 text-gray-800 dark:text-gray-50">
-        <h2 class="text-base text-gray-800 dark:text-red-500 font-semibold tracking-wide uppercase text-center md:text-left mb-4">Where I've Worked</h2>
+        <h2 class="text-base text-red-700 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left mb-4">Where I've Worked</h2>
         <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-0 justify-around tablist py-5">
             <div class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
                 <ul
                     class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:pr-5">
                     <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
                         class="box-border cursor-pointerfont-sans h-[60px] w-full text-center md:text-left pt-2 px-4 md:py-4"
-                        :class="{'bg-red-500/20': selectedIndex == index}"
+                        :class="{'bg-red-700/20 dark:bg-yellow-500/20': selectedIndex == index}"
                         @click="selected(index)">
-                        <h3 class="font-sans">{{ experience.employer }}</h3>
+                        <h3 class="font-sans leading-none md:leading-normal">{{ experience.employer }}</h3>
                     </li>
                 </ul>
-                <div id="elevator" class="absolute hidden md:block bg-red-500 h-[60px] w-1 transition-transform duration-500 ease-in-out"
+                <div id="elevator" class="absolute hidden md:block bg-red-700 dark:bg-yellow-500 h-[60px] w-1 transition-transform duration-500 ease-in-out"
                     :style="{ transform: `translateY(${elevatorPosition})` }"></div>
-                <div id="walkalator" class="absolute block md:hidden bg-red-500 w-[30vw] h-1 transition-transform duration-500 ease-in-out"
+                <div id="walkalator" class="absolute block md:hidden bg-red-700 dark:bg-yellow-500 w-[30vw] h-1 transition-transform duration-500 ease-in-out"
                     :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
             </div>
             <br class="block md:hidden" />
             <div class="flex flex-col h-[55vh] md:h-[50vh] w-fit md:w-[50vw] p-2">
                 <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title }}</span> |
-                    <span class="font-medium ml-2 text-gray-800 dark:text-red-500">{{ selectedExperience.employer }}</span></h3>
+                    <span class="font-medium ml-2 text-red-700 dark:text-yellow-500">{{ selectedExperience.employer }}</span></h3>
                 <p class="italic">{{ selectedExperience.date }}</p>
                 <br />
                 <ul class="">

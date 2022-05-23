@@ -4,7 +4,7 @@
     <div class="max-w-7xl px-4 md:px-0">
       <div class="lg:text-center">
         <h2
-          class="text-base text-gray-800 dark:text-red-500 font-semibold tracking-wide uppercase text-center md:text-left">
+          class="text-base text-red-700 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left">
           Skills</h2>
         <!-- <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">A better way to send money</p> -->
         <!-- <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p> -->
