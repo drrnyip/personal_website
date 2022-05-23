@@ -2,7 +2,6 @@
 <template>
   <div id="skills" class="py-12 bg-gray-100 dark:bg-gray-800 md:mx-24 lg:mx-36">
     <div class="max-w-7xl px-4 md:px-0">
-
       <h2
         class="text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
         Skills</h2>
