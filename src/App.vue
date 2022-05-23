@@ -1,6 +1,6 @@
 <template>
-  <Navbar :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" />
-  <!-- <lightbulb /> -->
+  <Navbar :darkMode="darkMode"/>
+  <Lightbulb :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" />
   <Landing :darkMode="darkMode" />
   <About :darkMode="darkMode" />
   <!-- <Divider :darkMode="darkMode" /> -->

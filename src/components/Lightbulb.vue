@@ -1,20 +1,31 @@
 <template>
-    <div class="sticky cursor-pointer inset-y-0 right-0 flex items-center pr-2 sm:inset-auto sm:ml-6 sm:pr-0"
-        @click="emitDarkMode">
+    <div id="bulbcontainer" class="fixed right-24 top-0 dark:-top-4 dark:hover:top-0 hover:top-0 top-0 items-center pr-2 h-fit" @click="emitDarkMode">
         <span class="sr-only">Toggle dark mode</span>
-        <div id="switch"></div>
-        <img id="bulb" class="z-50 h-8 w-8 rotate-180 translate-y-14"
-            :src="darkMode ? 'src/assets/light_regular.svg' : 'src/assets/light_solid.svg'" aria-hidden="true" />
-
-        <!-- <component :is="darkMode ? LightBulbIcon : LightBulbSolid" class="h-6 w-6" :class="{'text-yellow-300': !darkMode, 'text-white-100': darkMode}" @click="emitDarkMode"
-              aria-hidden="true" /> -->
+        <div id="switch" class="bg-gray-600"></div>
+        <img id="bulb" class="h-8 w-8 rotate-180"
+            :src="darkMode ? (flickering) ? lightSolid : lightRegular : lightSolid" aria-hidden="true" />
     </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue"
+import lightRegular from "../assets/light_regular.svg";
+import lightSolid from "../assets/light_solid.svg";
 const props = defineProps({
     darkMode: Boolean
 })
+
+let flickering = ref(false);
+
+onMounted(() => {
+    setInterval(() => {
+        flickering.value = true;
+        setTimeout(() => {
+            flickering.value = false;
+        }, Math.floor((Math.random() * 750) + 100))
+    }, Math.floor((Math.random() * 15000) + 5000))
+})
+
 const emits = defineEmits(['toggleDarkMode'])
 
 function emitDarkMode() {
@@ -23,13 +34,28 @@ function emitDarkMode() {
 </script>
 
 <style scoped>
+#bulbcontainer {
+    /* background: lime; */
+    width: 50px;
+    cursor: pointer;
+    z-index: 50;
+    transition: all 0.25s ease-in-out;
+}
+
 #switch {
-    height: 100px;
-    width: 10px;
+    height: 200px;
+    width: 2px;
     border-radius: 5px;
-    background: pink;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    right: -15px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+#bulb {
+    position: relative;
+    /* right: -5px; */
+    /* top: -3px; */
+    cursor: pointer;
 }
 </style>

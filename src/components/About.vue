@@ -1,8 +1,10 @@
 <template>
     <div id="about" class="py-12 bg-gray-100 dark:bg-gray-800 md:mx-24 lg:mx-36">
-        <h2
+                <h2 class="text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4">About me</h2>
+
+        <!-- <h2
             class="text-base text-red-700 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left">
-            About me</h2>
+            About me</h2> -->
         <div class="flex flex-col md:flex-row my-10">
             <img src="../assets/logo.png"
                 class="cover m-auto md:mr-8 h-48 w-48 ring-2 ring-red-700 dark:ring-yellow-500 rounded-full" />
