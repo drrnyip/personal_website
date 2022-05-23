@@ -53,7 +53,7 @@ const icons = [
     right: 50%;
     bottom: -50%;
     height: 5rem;
-    border-right: 2px solid #4f46e5;
+    border-right: 2px solid #4b5563;
 }
 
 #horizontal::before {
@@ -62,7 +62,7 @@ const icons = [
     bottom: 1.85rem;
     left: 3rem;
     width: 20%;
-    border-bottom: 2px solid #4f46e5;
+    border-bottom: 2px solid #4b5563;
 }
 
 
@@ -72,7 +72,7 @@ const icons = [
     bottom: 1.85rem;
     right: 3rem;
     width: 20%;
-    border-bottom: 2px solid #4f46e5;
+    border-bottom: 2px solid #4b5563;
 }
 
 .icon:hover {
