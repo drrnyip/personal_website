@@ -1,6 +1,6 @@
 <template>
     <div id="about" class="py-12 bg-gray-100 dark:bg-gray-800 md:mx-24 lg:mx-36">
-                <h2 class="text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4">About me</h2>
+                <h2 class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">About me</h2>
 
         <!-- <h2
             class="text-base text-red-700 dark:text-yellow-500 font-semibold tracking-wide uppercase text-center md:text-left">
@@ -18,7 +18,7 @@
                     I've been building web applications since 2015, working for <a href="https://www.checkmate.digital"
                         class="underline" target="_blank">smaller startups</a> to <a class="underline"
                         href="https://www.nyse.com/index" target="_blank">large corporations</a>. My interest lies in
-                    creating engaging, memorable digital experiences for users.
+                    creating engaging and memorable digital experiences for users.
                 </p>
                 <br />
                 <p>When not in front of a computer, you can usually find me in front of a piano, or with my nose in a book.</p>

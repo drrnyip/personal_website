@@ -22,8 +22,8 @@ onMounted(() => {
         flickering.value = true;
         setTimeout(() => {
             flickering.value = false;
-        }, Math.floor((Math.random() * 750) + 100))
-    }, Math.floor((Math.random() * 15000) + 5000))
+        }, Math.floor((Math.random() * 500) + 100))
+    }, Math.floor((Math.random() * 20000) + 1000))
 })
 
 const emits = defineEmits(['toggleDarkMode'])

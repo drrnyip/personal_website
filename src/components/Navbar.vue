@@ -15,6 +15,7 @@
           <div class="flex-shrink-0 flex items-center">
             <img class="block lg:hidden h-10 w-auto" src="../assets/logo.png" alt="Darren Yip" />
             <img class="hidden lg:block h-10 w-auto" src="../assets/logo.png" alt="Darren Yip" />
+            <h3 class="hidden lg:block ml-6 tracking-wider font-sans font-bold text-xl text-gray-800 dark:text-gray-50 cursor-default">Darren Yip</h3>
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">

@@ -5,7 +5,7 @@ module.exports = {
     fontFamily: {
       sans: ["Source Sans Pro", "sans-serif"],
       serif: ["Source Serif Pro", "serif"],
-      mono: ["Roboto Mono", "mono"]
+      mono: ["Space Mono", "mono"]
     },
     extend: {},
   },
