@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:right-24">
+    <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:left-14">
         <a v-for="icon in icons" :key="icon.id" :alt="icon.id" :href="icon.href"
             class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
             <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-8 w-8" />
@@ -44,14 +44,6 @@ const icons = [
         darkImg: linkedinDark,
     },
 ]
-
-function getSrc(id) {
-    if (props.darkMode) {
-        return new URL(`../assets/${id}_yellow.svg`).href;
-    } else {
-        return new URL(`../assets/${id}_gray.svg`).href;
-    }
-}
 </script>
 
 <style scoped>

@@ -22,7 +22,7 @@
                     :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
             </div>
             <br class="block md:hidden" />
-            <div class="flex flex-col h-[55vh] md:h-[50vh] lg:h-[40vh] md:h-[50vh] w-fit md:w-[50vw] p-2">
+            <div class="flex flex-col h-fit min-h-[55vh] md:min-h-[50vh] lg:min-h-[40vh] w-fit md:w-[50vw] p-2">
                 <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title }}</span> |
                     <span class="font-medium ml-2 text-red-700 dark:text-yellow-500">{{ selectedExperience.employer
                     }}</span>
