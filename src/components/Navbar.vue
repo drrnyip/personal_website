@@ -26,11 +26,6 @@
             </div>
           </div>
         </div>
-        <!-- <div id="bulbcontainer" class="absolute right-0 items-center pr-2 h-fit" @click="emitDarkMode">
-          <span class="sr-only">Toggle dark mode</span>
-          <div id="switch" class="bg-gray-600"></div>
-          <img id="bulb" class="h-8 w-8 rotate-180" :src="darkMode ? lightRegular : lightSolid" aria-hidden="true" />
-        </div> -->
       </div>
     </div>
 
@@ -56,10 +51,6 @@ const props = defineProps({
 })
 const emits = defineEmits(['toggleDarkMode'])
 
-function emitDarkMode() {
-  emits('toggleDarkMode', true);
-}
-
 const navigation = [
   { name: 'About', href: 'about', current: true },
   { name: 'Experience', href: 'experience', current: false },
@@ -70,7 +61,6 @@ function scrollTo(event, target) {
   event.preventDefault();
   document.getElementById(target).scrollIntoView({ behavior: "smooth" });
 }
-
 </script>
 
 <style scoped>
