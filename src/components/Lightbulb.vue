@@ -9,8 +9,6 @@
 
 <script setup>
 import { ref, onMounted } from "vue"
-import lightRegular from "../assets/light_regular.svg";
-import lightSolid from "../assets/light_solid.svg";
 import lightOn from "../assets/lightbulb_on.png";
 import lightOff from "../assets/lightbulb_off.png";
 
