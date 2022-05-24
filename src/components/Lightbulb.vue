@@ -3,7 +3,7 @@
         <span class="sr-only">Toggle dark mode</span>
         <div id="switch" class="bg-gray-600"></div>
         <img id="bulb" class="h-8 w-8 rotate-180"
-            :src="darkMode ? (flickering) ? lightSolid : lightRegular : lightSolid" aria-hidden="true" />
+            :src="darkMode ? (flickering) ? lightOn : lightOff : lightOn" aria-hidden="true" />
     </div>
 </template>
 
@@ -11,6 +11,9 @@
 import { ref, onMounted } from "vue"
 import lightRegular from "../assets/light_regular.svg";
 import lightSolid from "../assets/light_solid.svg";
+import lightOn from "../assets/lightbulb_on.png";
+import lightOff from "../assets/lightbulb_off.png";
+
 const props = defineProps({
     darkMode: Boolean
 })

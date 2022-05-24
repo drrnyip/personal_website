@@ -10,12 +10,12 @@
 </template>
 
 <script setup>
-import envelopeDark from "../assets/envelope_yellow.svg"
-import envelopeLight from "../assets/envelope_gray.svg"
-import githubDark from "../assets/github_yellow.svg"
-import githubLight from "../assets/github_gray.svg"
-import linkedinDark from "../assets/linkedin_yellow.svg"
-import linkedinLight from "../assets/linkedin_gray.svg"
+import mailYellow from "../assets/mail_yellow.png";
+import mailRed from "../assets/mail_red.png";
+import githubYellow from "../assets/github_yellow.png";
+import githubRed from "../assets/github_red.png";
+import linkedinYellow from "../assets/linkedin_yellow.png";
+import linkedinRed from "../assets/linkedin_red.png";
 
 const props = defineProps({
     darkMode: Boolean
@@ -26,22 +26,22 @@ const icons = [
         id: "envelope",
         description: "Email",
         href: "mailto:drrnyip@gmail.com",
-        lightImg: envelopeLight,
-        darkImg: envelopeDark,
+        lightImg: mailRed,
+        darkImg: mailYellow,
     },
     {
         id: "github",
         description: "GitHub",
         href: "https://github.com/drrnyip",
-        lightImg: githubLight,
-        darkImg: githubDark,
+        lightImg: githubRed,
+        darkImg: githubYellow,
     },
     {
         id: "linkedin",
         description: "LinkedIn",
         href: "https://www.linkedin.com/in/drrnyip/",
-        lightImg: linkedinLight,
-        darkImg: linkedinDark,
+        lightImg: linkedinRed,
+        darkImg: linkedinYellow,
     },
 ]
 </script>
