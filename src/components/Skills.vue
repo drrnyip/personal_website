@@ -26,14 +26,15 @@
 </template>
 
 <script setup>
-import codeDark from "../assets/code_yellow.svg"
-import codeLight from "../assets/code_gray.svg"
-import bookDark from "../assets/book_yellow.svg"
-import bookLight from "../assets/book_gray.svg"
-import databaseDark from "../assets/database_yellow.svg"
-import databaseLight from "../assets/database_gray.svg"
-import toolsDark from "../assets/tools_yellow.svg"
-import toolsLight from "../assets/tools_gray.svg"
+import code_yellowPng from "../assets/code_yellow.png";
+import book_yellowPng from "../assets/book_yellow.png";
+import database_yellowPng from "../assets/database_yellow.png";
+import tools_yellowPng from "../assets/tools_yellow.png";
+import code_redPng from "../assets/code_red.png";
+import book_redPng from "../assets/book_red.png";
+import database_redPng from "../assets/database_red.png";
+import tools_redPng from "../assets/tools_red.png";
+
 
 const props = defineProps({
   darkMode: Boolean
@@ -44,32 +45,32 @@ const skills = [
     description:
       'HTML5, CSS3, JavaScript, ES6, Typescript',
     id: 'code',
-    lightImg: codeLight,
-    darkImg: codeDark,
+    lightImg: code_redPng,
+    darkImg: code_yellowPng,
   },
   {
     name: 'Libraries / Frameworks',
     description:
       'Vue.js, Node.js, Express, GraphQL, gRPC, Bootstrap, TailwindCSS',
     id: 'book',
-    lightImg: bookLight,
-    darkImg: bookDark,
+    lightImg: book_redPng,
+    darkImg: book_yellowPng,
   },
   {
     name: 'Databases',
     description:
       'PostgreSQL, MongoDB',
     id: 'database',
-    lightImg: databaseLight,
-    darkImg: databaseDark,
+    lightImg: database_redPng,
+    darkImg: database_yellowPng,
   },
   {
     name: 'Tools',
     description:
       'Git, Firebase, Docker, Kubernetes, Helm, AWS, GCP, Snyk',
     id: 'tools',
-    lightImg: toolsLight,
-    darkImg: toolsDark,
+    lightImg: tools_redPng,
+    darkImg: tools_yellowPng,
   },
 ]
 </script>
