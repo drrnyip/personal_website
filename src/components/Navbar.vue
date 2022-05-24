@@ -43,8 +43,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { LightBulbIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { LightBulbIcon as LightBulbSolid } from '@heroicons/vue/solid'
-import lightRegular from "../assets/light_regular.svg";
-import lightSolid from "../assets/light_solid.svg";
 
 const props = defineProps({
   darkMode: Boolean
