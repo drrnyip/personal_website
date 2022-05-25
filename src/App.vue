@@ -16,7 +16,7 @@
   <aos-vue animation="fade-in" :once="true" placement="center-bottom">
     <experience :darkMode="darkMode" />
   </aos-vue>
-  <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+  <aos-vue animation="fade-in" :offset="-200" :once="true" placement="center-bottom">
     <Contact :darkMode="darkMode" />
   </aos-vue>
   <Social :darkMode="darkMode" />
