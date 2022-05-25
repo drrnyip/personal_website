@@ -13,10 +13,11 @@
     <Skills :darkMode="darkMode" />
   </aos-vue>
   <aos-vue animation="fade-in" :once="true">
-
     <experience :darkMode="darkMode" />
   </aos-vue>
-  <Contact :darkMode="darkMode" />
+  <aos-vue animation="fade-in" anchor="#experience" delay="500" :once="true">
+    <Contact :darkMode="darkMode" />
+  </aos-vue>
   <Social :darkMode="darkMode" />
 </template>
 
