@@ -16,12 +16,21 @@ import githubYellow from "../assets/github_yellow.png";
 import githubRed from "../assets/github_red.png";
 import linkedinYellow from "../assets/linkedin_yellow.png";
 import linkedinRed from "../assets/linkedin_red.png";
+import cvYellow from "../assets/cv_yellow.png";
+import cvRed from "../assets/cv_red.png";
 
 const props = defineProps({
     darkMode: Boolean
 })
 
 const icons = [
+    {
+        id: "cv",
+        description: "cv",
+        href: "https://drive.google.com/file/d/1DmUaqbfcWk2VcdVsgVdwyKQo1iEMJE5b/view?usp=sharing",
+        lightImg: cvRed,
+        darkImg: cvYellow,
+    },
     {
         id: "envelope",
         description: "Email",
@@ -43,6 +52,7 @@ const icons = [
         lightImg: linkedinRed,
         darkImg: linkedinYellow,
     },
+
 ]
 </script>
 

@@ -6,7 +6,10 @@
         <p class="text-base md:text-md lg:text-lg font-sans text-gray-800 dark:text-gray-50 tracking-wide mb-6">
             Drop me an email and I'll get back to you as soon as I can
         </p>
-        <a class="mb-48 mx-auto border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
+        <div class="flex mx-auto justify-around">
+            <a class="mb-48 mx-auto border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
+            <a class="mb-48 mx-auto border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="https://drive.google.com/file/d/1DmUaqbfcWk2VcdVsgVdwyKQo1iEMJE5b/view?usp=sharing" target="_blank">Download Resume</a>
+        </div>
     </div>
 </template>
 
