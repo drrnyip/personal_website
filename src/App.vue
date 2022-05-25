@@ -1,7 +1,7 @@
 <template>
   <Navbar :darkMode="darkMode" />
   <Lightbulb :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" />
-  <aos-vue animation="fade-in" :once="true" :duration="1500">
+  <aos-vue animation="fade-in" :once="true" :delay="1000" :duration="1500">
     <Landing :darkMode="darkMode" />
   </aos-vue>
   <aos-vue animation="fade-in" :once="true">

@@ -34,17 +34,15 @@ watch(() => props.darkMode, async (curr, prev) => {
 })
 
 onMounted(() => {
-    resetDraw();
+    resetDraw(2500);
 })
 
-function resetDraw() {
+function resetDraw(customDelay) {
     drawCurtain.value = false;
     setTimeout(() => {
         drawCurtain.value = true;
-    }, delay)
+    }, customDelay ? customDelay : delay)
 }
-
-
 </script>
 
 <style>
