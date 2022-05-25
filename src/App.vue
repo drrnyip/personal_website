@@ -18,7 +18,7 @@
   <aos-vue animation="fade-in" :once="true">
     <experience :darkMode="darkMode" />
   </aos-vue>
-  <aos-vue animation="fade-in" anchor="#experience" delay="500" :once="true">
+  <aos-vue animation="fade-in" :offset="-200" :once="true">
     <Contact :darkMode="darkMode" />
   </aos-vue>
   <Social :darkMode="darkMode" />
