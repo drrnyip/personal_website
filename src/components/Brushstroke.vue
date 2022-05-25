@@ -1,7 +1,7 @@
 <template>
     <div id="headings"
         :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }">
-        <div class="curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
+        <div class="hidden md:block curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
         <div class="contents">
             <slot></slot>
         </div>

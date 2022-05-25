@@ -4,7 +4,7 @@
   <aos-vue animation="fade-in" :once="true" :delay="1000" :duration="1500" placement="center-bottom">
     <Landing :darkMode="darkMode" />
   </aos-vue>
-  <aos-vue animation="fade-left" :once="true" placement="top-center">
+  <aos-vue animation="fade-in" :once="true" placement="top-center">
   <Divider :darkMode="darkMode" />
   </aos-vue>
   <aos-vue animation="fade-in" :once="true" placement="center-bottom">
