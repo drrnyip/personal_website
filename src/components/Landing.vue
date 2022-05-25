@@ -27,7 +27,7 @@ const props = defineProps({
 })
 
 let drawCurtain = ref(false);
-let delay = 500; // milliseconds
+let delay = 250; // milliseconds
 
 watch(() => props.darkMode, async (curr, prev) => {
     resetDraw();
@@ -47,13 +47,10 @@ function resetDraw(customDelay) {
 
 <style>
 #headings {
-    /* background-position: bottom; */
     position: relative;
     background-size: 100% 100%;
     object-fit: cover;
     background-repeat: no-repeat;
-    -webkit-transition: background-image 0.2s ease-in-out;
-    transition: background-image 0.25s ease-in-out;
     z-index: 5;
 }
 
@@ -67,11 +64,11 @@ function resetDraw(customDelay) {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.25s ease-out;
     z-index: -1;
 }
 
 .draw-curtain {
+    transition: transform 0.25s ease-out;
     transform: translateX(110%);
 }
 
