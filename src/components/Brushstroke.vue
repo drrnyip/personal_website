@@ -1,5 +1,5 @@
 <template>
-    <div id="headings" :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode }">
+    <div id="headings" :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }">
         <div class="curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
         <div class="contents">
             <slot></slot>
@@ -11,7 +11,11 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
 const props = defineProps({
-    darkMode: Boolean
+    darkMode: Boolean,
+    style: {
+        type: String,
+        default: 'highlight', // 'highlight' or 'stroke'
+    }
 })
 
 let drawCurtain = ref(false);
@@ -36,10 +40,19 @@ function resetDraw(customDelay) {
 <style>
 #headings {
     position: relative;
-    background-size: 100% 100%;
     object-fit: cover;
     background-repeat: no-repeat;
     z-index: 5;
+}
+
+.highlight {
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+.stroke {
+    background-size: 50% 15% !important;
+    background-position: 50% 90% !important;
 }
 
 .contents {
