@@ -5,7 +5,7 @@
             <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-8 w-8" />
         </a>
         <div id="vertical" class="hidden md:block"></div>
-        <div id="horizontal" class="block md:hidden"></div>
+        <!-- <div id="horizontal" class="block md:hidden"></div> -->
     </div>
 </template>
 

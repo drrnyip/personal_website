@@ -48,10 +48,20 @@ function resetDraw(customDelay) {
 
 @media only screen and (max-width: 480px) {
     .highlight {
-        background-size: 100% 70% !important;
-        background-position: 0% 50% !important;
+        background-size: 100% 50% !important;
+        background-position: 0% 35% !important;
     }
+    .stroke {
+        background-size: 50% 15% !important;
+        background-position: 50% 90% !important;
+    }
+}
 
+@media only screen and (min-width: 481px) {
+    .highlight {
+        background-size: 100% 70% !important;
+        background-position: 0% 40% !important;
+    }
     .stroke {
         background-size: 50% 15% !important;
         background-position: 50% 90% !important;
@@ -59,18 +69,27 @@ function resetDraw(customDelay) {
 
 }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 768px) {
     .highlight {
-        background: pink;
-        background-size: 90% 90% !important;
-        background-position: 0% 150% !important;
+        background-size: 90% 80% !important;
+        background-position: 0% 55% !important;
     }
-
     .stroke {
         background-size: 50% 15% !important;
         background-position: 50% 90% !important;
     }
 
+}
+
+@media only screen and (min-width: 1024px) {
+    .highlight {
+        background-size: 90% 80% !important;
+        background-position: 0% 75% !important;
+    }
+    .stroke {
+        background-size: 50% 15% !important;
+        background-position: 50% 90% !important;
+    }
 }
 
 .contents {
