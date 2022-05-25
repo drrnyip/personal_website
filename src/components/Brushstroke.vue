@@ -1,5 +1,6 @@
 <template>
-    <div id="headings" :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }">
+    <div id="headings"
+        :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }">
         <div class="curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
         <div class="contents">
             <slot></slot>
@@ -45,14 +46,31 @@ function resetDraw(customDelay) {
     z-index: 5;
 }
 
-.highlight {
-    background-size: 100% 100% !important;
-    background-position: center !important;
+@media only screen and (max-width: 480px) {
+    .highlight {
+        background-size: 100% 70% !important;
+        background-position: 0% 50% !important;
+    }
+
+    .stroke {
+        background-size: 50% 15% !important;
+        background-position: 50% 90% !important;
+    }
+
 }
 
-.stroke {
-    background-size: 50% 15% !important;
-    background-position: 50% 90% !important;
+@media only screen and (min-width: 481px) {
+    .highlight {
+        background: pink;
+        background-size: 90% 90% !important;
+        background-position: 0% 150% !important;
+    }
+
+    .stroke {
+        background-size: 50% 15% !important;
+        background-position: 50% 90% !important;
+    }
+
 }
 
 .contents {
