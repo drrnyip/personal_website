@@ -1,6 +1,6 @@
 <template>
     <div id="landing"
-        class="flex flex-col justify-start pt-28 md:pt-36 lg:pt-48 px-12 md:px-48 h-full min-h-[90vh] w-full md:text-left bg-gray-100 dark:bg-gray-800">
+        class="flex flex-col justify-start pt-28 md:pt-36 lg:pt-48 px-12 md:px-48 h-full min-h-[95vh] w-full md:text-left bg-gray-100 dark:bg-gray-800">
         <Brushstroke :darkMode="darkMode">
             <h3
                 class="text-lg md:text-xl lg:text-2xl font-sans uppercase text-red-700 dark:text-yellow-500 tracking-widest font-semibold">
