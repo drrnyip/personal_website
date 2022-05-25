@@ -1,5 +1,5 @@
 <template>
-    <div id="contact" class="flex flex-col mx-auto w-full md:w-[50vw] px-4 md:px-0 text-center h-fit justify-center">
+    <div id="contact" class="flex flex-col mx-auto w-full md:w-[50vw] px-4 md:px-0 text-center h-fit justify-center mb-12">
         <Brushstroke :darkMode="darkMode" :style="'stroke'">
         <h2 class="text-3xl md:text-3xl lg:text-4xl w-fit mx-auto font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4">Get In Touch</h2>
             </Brushstroke>
@@ -7,8 +7,8 @@
             Drop me an email and I'll get back to you as soon as I can
         </p>
         <div class="flex mx-auto justify-around">
-            <a class="mb-48 mx-auto border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
-            <a class="mb-48 mx-auto border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="https://drive.google.com/file/d/1a9VnTYdrQKKPBBE3rh0sJ7ARW4JBvyVZ/view?usp=sharing" target="_blank">Download Resume</a>
+            <a class="mx-auto border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
+            <a class="mx-auto border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="https://drive.google.com/file/d/1a9VnTYdrQKKPBBE3rh0sJ7ARW4JBvyVZ/view?usp=sharing" target="_blank">Download Resume</a>
         </div>
     </div>
 </template>

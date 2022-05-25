@@ -20,6 +20,7 @@
     <Contact :darkMode="darkMode" />
   </aos-vue>
   <Social :darkMode="darkMode" />
+  <br />
 </template>
 
 
