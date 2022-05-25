@@ -5,22 +5,25 @@
     <Landing :darkMode="darkMode" />
   </aos-vue>
   <aos-vue animation="fade-in" :once="true" placement="top-center">
-  <Divider :darkMode="darkMode" />
+    <Divider :darkMode="darkMode" />
   </aos-vue>
-  <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-    <About :darkMode="darkMode" />
-  </aos-vue>
-  <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-    <Skills :darkMode="darkMode" />
-  </aos-vue>
-  <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-    <experience :darkMode="darkMode" />
-  </aos-vue>
-  <aos-vue animation="fade-in" :offset="-200" :once="true" placement="center-bottom">
-    <Contact :darkMode="darkMode" />
-  </aos-vue>
-  <Social :darkMode="darkMode" />
+  <div class="mx-2 sm:mx-8 md:mx-12 lg:mx-24 xl:mx-36 2xl:mx-80">
+    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+      <About :darkMode="darkMode" />
+    </aos-vue>
+    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+      <Skills :darkMode="darkMode" />
+    </aos-vue>
+    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+      <experience :darkMode="darkMode" />
+    </aos-vue>
+    <aos-vue animation="fade-in" :offset="-200" :once="true" placement="center-bottom">
+      <Contact :darkMode="darkMode" />
+    </aos-vue>
+  </div>
   <br />
+  <Social :darkMode="darkMode" />
+
 </template>
 
 
