@@ -30,6 +30,11 @@ import code_yellowPng from "../assets/code_yellow.png";
 import book_yellowPng from "../assets/book_yellow.png";
 import database_yellowPng from "../assets/database_yellow.png";
 import tools_yellowPng from "../assets/tools_yellow.png";
+import merge_yellowPng from "../assets/merge_yellow.png";
+import merge_redPng from "../assets/merge_red.png";
+import cloud_yellowPng from "../assets/cloud_yellow.png";
+import cloud_redPng from "../assets/cloud_red.png";
+
 import code_redPng from "../assets/code_red.png";
 import book_redPng from "../assets/book_red.png";
 import database_redPng from "../assets/database_red.png";
@@ -51,7 +56,7 @@ const skills = [
   {
     name: 'Libraries / Frameworks',
     description:
-      'Vue.js, Node.js, Express, GraphQL, gRPC, Bootstrap, TailwindCSS',
+      'Vue.js, Node.js, Express, GraphQL, gRPC, Bootstrap, TailwindCSS, Mocha.js',
     id: 'book',
     lightImg: book_redPng,
     darkImg: book_yellowPng,
@@ -59,15 +64,31 @@ const skills = [
   {
     name: 'Databases',
     description:
-      'PostgreSQL, MongoDB',
+      'SQL, PostgreSQL, MongoDB',
     id: 'database',
     lightImg: database_redPng,
     darkImg: database_yellowPng,
   },
+    {
+    name: 'Cloud',
+    description:
+      'Docker, Kubernetes, Helm, AWS, GCP',
+    id: 'cloud',
+    lightImg: cloud_redPng,
+    darkImg: cloud_yellowPng,
+  },
+    {
+    name: 'Version Control',
+    description:
+      'Git, GitHub',
+    id: 'merge',
+    lightImg: merge_redPng,
+    darkImg: merge_yellowPng,
+  },
   {
     name: 'Tools',
     description:
-      'Git, Firebase, Docker, Kubernetes, Helm, AWS, GCP, Snyk',
+      'Firebase, Adobe Photoshop',
     id: 'tools',
     lightImg: tools_redPng,
     darkImg: tools_yellowPng,
