@@ -48,7 +48,7 @@ const skills = [
   {
     name: 'Languages',
     description:
-      'HTML5, CSS3, JavaScript, ES6, Typescript',
+      'HTML5, CSS3, JavaScript, Typescript',
     id: 'code',
     lightImg: code_redPng,
     darkImg: code_yellowPng,
@@ -56,7 +56,7 @@ const skills = [
   {
     name: 'Libraries / Frameworks',
     description:
-      'Vue.js, Node.js, Express, GraphQL, gRPC, Bootstrap, TailwindCSS, Mocha.js',
+      'Vue.js, Node.js, Bootstrap, TailwindCSS',
     id: 'book',
     lightImg: book_redPng,
     darkImg: book_yellowPng,
@@ -88,7 +88,7 @@ const skills = [
   {
     name: 'Tools',
     description:
-      'Firebase, Adobe Photoshop',
+      'Express.js, GraphQL, gRPC, Passport.js, Okta, Mocha.js, Firebase, Adobe Photoshop',
     id: 'tools',
     lightImg: tools_redPng,
     darkImg: tools_yellowPng,

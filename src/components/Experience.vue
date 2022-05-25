@@ -59,8 +59,9 @@ const experiences = [
         employer: "New York Stock Exchange",
         description: [
             "Joined as part of acquisition of Hercules Solutions",
-            "Worked on migrating application from GCP to company's internally regulated AWS cloud",
-            "Worked closely with management and QA teams to test and integrate application with existing company infrastructure",
+            "Worked on migrating application from GCP to company’s internally regulated AWS cloud",
+            "Communicated and collaborated with management and QA teams to test and integrate application with existing company infrastructure",
+            "Rewrote front-end codebase and migrated production application from Vue 2 to Vue 3",
             "Developed runbook for onboarding new team members",
         ],
         date: '2021 - 2022',
@@ -70,10 +71,13 @@ const experiences = [
         employer: "Hercules Solutions",
         description: [
             "Worked in two-man engineering team as a full-stack developer on a secure, scalable fintech platform built on a microservice architecture",
-            "Primary front-end developer & designer. Proposed, prototyped and developed new features based on business requirements. ",
-            "Configured and deployed new releases across all environments using Kubernetes and Helm and ensured deployment was according to specifications",
+            "Proposed, prototyped and developed new features based on business requirements and client requests",
+            "Wrote performant, robust code and maintained major features of fintech application",
+            "Configured, tested and deployed new releases across all environments using Kubernetes and Helm and ensured deployment was according to specifications",
+            "Implemented, tested and deployed SAML-authenticated login using Passport.js and Okta",
             "Diagnosed and fixed bugs across all layers of the stack",
             "Migrated web application from Angular 2 to Vue.js",
+
         ],
         date: '2019 - 2021',
     },
@@ -81,6 +85,7 @@ const experiences = [
         title: "Software Developer",
         employer: "Checkmate Digital",
         description: [
+            "Collaborated with multi-disciplinary teams and clients to create bespoke web applications across myriad industries. Primary tools included  Angular 2/Node.js/Firebase"
         ],
         date: '2017 - 2019',
     },
