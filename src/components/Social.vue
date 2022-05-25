@@ -1,15 +1,20 @@
 <template>
-    <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:left-14">
-        <a v-for="icon in icons" :key="icon.id" :alt="icon.id" :href="icon.href"
-            class="icon mb-4 mx-4 md:mx-0 hover:opacity-70" target="_blank">
-            <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-8 w-8" />
-        </a>
+    <div class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:left-14 cursor-pointer">
+        <div v-for="icon in icons" :key="icon.id"
+            class="icon relative font-sans tracking-wider mb-4 mx-4 md:mx-0 hover:opacity-70"
+            @mouseenter="setHover(icon.id)" @mouseleave="stopHover(icon.id)">
+            <a :alt="icon.id" :href="icon.href" class="" target="_blank">
+                <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-8 w-8" />
+            </a>
+            <p class="tooltip absolute cursor-pointer hidden md:block" :class="{ show: isHovering[icon.id]}">{{ icon.description }}</p>
+        </div>
         <div id="vertical" class="hidden md:block"></div>
-        <div id="horizontal" class="block md:hidden"></div>
+        <!-- <div id="horizontal" class="block md:hidden"></div> -->
     </div>
 </template>
 
 <script setup>
+import {ref} from 'vue';
 import mailYellow from "../assets/mail_yellow.png";
 import mailRed from "../assets/mail_red.png";
 import githubYellow from "../assets/github_yellow.png";
@@ -23,10 +28,12 @@ const props = defineProps({
     darkMode: Boolean
 })
 
+const isHovering = ref({});
+
 const icons = [
     {
         id: "cv",
-        description: "cv",
+        description: "Resume",
         href: "https://drive.google.com/file/d/1DmUaqbfcWk2VcdVsgVdwyKQo1iEMJE5b/view?usp=sharing",
         lightImg: cvRed,
         darkImg: cvYellow,
@@ -54,6 +61,15 @@ const icons = [
     },
 
 ]
+
+function setHover(id) {
+    isHovering.value[id] = true;
+}
+
+function stopHover(id) {
+    isHovering.value[id] = false;
+}
+
 </script>
 
 <style scoped>
@@ -75,7 +91,6 @@ const icons = [
     border-bottom: 2px solid #4b5563;
 }
 
-
 #horizontal::after {
     content: '';
     position: absolute;
@@ -86,29 +101,22 @@ const icons = [
 }
 
 .icon:hover {
-    transform: translateY(-3px);
-    transition: all 0.1s ease-in;
+    /* transform: translateY(-3px); */
+    /* transition: all 0.1s ease-in; */
     /* animation: bounce 1s; */
 }
 
-/* @keyframes bounce {
-    0%,
-    20%,
-    50%
-    {
-        transform: translateY(0);
-    }
+.tooltip {
+    color: white;
+    top: 20%;
+    left: 150%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
 
-    40% {
-        transform: translateY(-8px);
-    }
-
-    60% {
-        transform: translateY(-5px);
-    }
-
-    100% {
-        transform: translateY(-5px);
-    }
-} */
+.show {
+    opacity: 1;
+    transform: translateX(0%);
+}
 </style>
