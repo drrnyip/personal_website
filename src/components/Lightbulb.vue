@@ -1,6 +1,6 @@
 <template>
     <div id="bulbcontainer"
-        class="fixed right-6 md:right-14 lg:right-24 -top-28 dark:-top-32 dark:hover:-top-28 hover:-top-28 md:top-0 md:dark:-top-4 md:dark:hover:top-0 md:hover:top-0 items-center pr-2 h-fit"
+        class="fixed right-8 sm:right-12 md:right-14 lg:right-24 xl:right-36 2xl:right-52 -top-28 dark:-top-32 dark:hover:-top-28 hover:-top-28 md:top-0 md:dark:-top-4 md:dark:hover:top-0 md:hover:top-0 items-center pr-2 h-fit"
         :class="{ entry: entered }" @click="emitDarkMode">
         <span class="sr-only">Toggle dark mode</span>
         <div id="switch" class="bg-gray-600"></div>
