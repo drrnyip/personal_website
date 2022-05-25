@@ -87,7 +87,7 @@ function resetDraw(customDelay) {
 }
 
 .draw-curtain {
-    transition: transform 0.25s ease-out;
+    transition: transform 0.4s ease;
     transform: translateX(110%);
 }
 
