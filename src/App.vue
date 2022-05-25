@@ -4,10 +4,13 @@
   <aos-vue animation="fade-in" :once="true" :delay="1000" :duration="1500">
     <Landing :darkMode="darkMode" />
   </aos-vue>
+  <aos-vue animation="fade-left" :offset="-200" :once="true">
+
+  <Divider :darkMode="darkMode" />
+  </aos-vue>
   <aos-vue animation="fade-in" :once="true">
     <About :darkMode="darkMode" />
   </aos-vue>
-  <!-- <Divider :darkMode="darkMode" /> -->
   <aos-vue animation="fade-in" :once="true">
 
     <Skills :darkMode="darkMode" />

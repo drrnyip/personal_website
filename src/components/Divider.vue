@@ -1,5 +1,6 @@
 <template>
-  <hr class="divider h-4 w-full bg-gradient-to-br from-green-400 to-blue-400" />
+  <img v-if="darkMode" class="w-full h-3 mx-auto" src="../assets/brush_red.png" />
+  <img v-if="!darkMode" class="w-full h-3 mx-auto" src="../assets/brush_yellow.png" />
 </template>
 
 <script setup>
