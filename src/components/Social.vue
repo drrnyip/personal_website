@@ -2,12 +2,12 @@
     <div id="social" class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:left-14 cursor-pointer"
         :class="{ entry: entered }">
         <div v-for="icon in icons" :key="icon.id"
-            class="icon relative font-sans tracking-wider mb-4 mx-4 md:mx-0 hover:opacity-70"
+            class="icon relative font-sans tracking-wider mb-4 mx-4 md:mx-0 hover:scale-125 transition-transform"
             @mouseenter="setHover(icon.id)" @mouseleave="stopHover(icon.id)">
             <a :alt="icon.id" :href="icon.href" class="" target="_blank">
                 <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-8 w-8" />
             </a>
-            <p class="tooltip absolute cursor-pointer hidden md:block" :class="{ show: isHovering[icon.id] }">{{
+            <p class="tooltip absolute cursor-pointer hidden md:block text-gray-800 dark:text-gray-50" :class="{ show: isHovering[icon.id] }">{{
                     icon.description
             }}</p>
         </div>
@@ -111,7 +111,6 @@ function stopHover(id) {
 }
 
 .tooltip {
-    color: white;
     top: 20%;
     left: 150%;
     transform: translateX(-100%);
