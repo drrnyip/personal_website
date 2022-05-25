@@ -4,7 +4,7 @@
   <aos-vue animation="fade-in" :once="true" :delay="1000" :duration="1500" placement="center-bottom">
     <Landing :darkMode="darkMode" />
   </aos-vue>
-  <aos-vue animation="fade-left" :offset="-200" :once="true" placement="center-bottom">
+  <aos-vue animation="fade-left" :once="true" placement="top-center">
   <Divider :darkMode="darkMode" />
   </aos-vue>
   <aos-vue animation="fade-in" :once="true" placement="center-bottom">
@@ -16,7 +16,7 @@
   <aos-vue animation="fade-in" :once="true" placement="center-bottom">
     <experience :darkMode="darkMode" />
   </aos-vue>
-  <aos-vue animation="fade-in" :offset="-200" :once="true" placement="center-bottom">
+  <aos-vue animation="fade-in" :once="true" placement="center-bottom">
     <Contact :darkMode="darkMode" />
   </aos-vue>
   <Social :darkMode="darkMode" />
