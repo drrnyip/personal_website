@@ -1,7 +1,7 @@
 <template>
     <div id="headings"
         :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }">
-        <div class="hidden md:block curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
+        <div class="curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
         <div class="contents">
             <slot></slot>
         </div>
@@ -106,8 +106,24 @@ function resetDraw(customDelay) {
 }
 
 .draw-curtain {
-    transition: transform 0.4s ease;
-    transform: translateX(110%);
+    animation: drawcurtain 0.35s linear 0s 1;
+    animation-fill-mode: forwards;
+        transform-origin: right;
+}
+
+@keyframes drawcurtain {
+    0% {
+        transform: translateX(0%);
+    }
+    60% {
+        transform: translateX(70%) scaleX(0.5);
+    }
+    80% {
+        transform: translateX(90%) scaleX(0);
+    }
+    100% {
+        transform: translateX(0%) scaleX(0);
+    }
 }
 
 .brush-yellow {
