@@ -6,9 +6,9 @@
         <p class="text-base md:text-md lg:text-lg font-sans text-gray-800 dark:text-gray-50 tracking-wide mb-6">
             Drop me an email and I'll get back to you as soon as I can
         </p>
-        <div class="flex flex-col md:flex-row mx-auto justify-center items-center">
-            <a class="mx-auto mb-4 md:mb-0 border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
-            <a class="mx-auto mb-4 md:mb-0 border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="https://drive.google.com/file/d/1a9VnTYdrQKKPBBE3rh0sJ7ARW4JBvyVZ/view?usp=sharing" target="_blank">Download Resume</a>
+        <div class="flex flex-col md:flex-row mx-auto ">
+            <a class="mx-auto md:mx-2 mb-4 md:mb-0 border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
+            <a class="mx-auto md:mx-2 mb-4 md:mb-0 border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="https://drive.google.com/file/d/1a9VnTYdrQKKPBBE3rh0sJ7ARW4JBvyVZ/view?usp=sharing" target="_blank">Download Resume</a>
         </div>
     </div>
 </template>
