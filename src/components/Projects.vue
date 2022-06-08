@@ -7,7 +7,7 @@
         <div class="flex flex-col mt-8">
             <div v-for="project of projects" :key="project.name" class="project flex flex-col md:flex-row">
                 <div
-                    class="screenshot rounded border-red-700 dark:border-yellow-500 border-2 mx-6 md:mx-2 basis-2/5 md:basis-3/5 flex-1 cursor-pointer">
+                    class="screenshot rounded border-red-700 dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
                     <img :src="project.img"
                         class="object-contain h-full w-full mix-blend-difference hover:mix-blend-saturate backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness "
                         :alt="project.alt" @click="newtab(project.href)" />
