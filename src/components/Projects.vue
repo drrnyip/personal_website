@@ -1,0 +1,80 @@
+<template>
+    <div id="projects" class="py-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-50">
+        <h2
+            class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
+            Things I've Built
+        </h2>
+        <div class="flex flex-col">
+            <div v-for="project of projects" :key="project.name" class="flex flex-col md:flex-row">
+                <div class="screenshot rounded border-red-700 dark:border-yellow-500 border-2 mx-6 md:mx-2 basis-2/5 md:basis-3/5 flex-1 cursor-pointer">
+                    <img :src="project.img" class="object-contain h-full w-full mix-blend-difference hover:mix-blend-saturate backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness " :alt="project.alt" @click="newtab(project.href)"/>
+                </div>
+                <div class="details basis-2/5 flex-1 text-center md:text-right z-10">
+                    <h1 class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">{{project.name}}</h1>
+                    <p class="w-full md:w-[120%] md:ml-[-20%] text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900">{{project.description}}</p>
+                    <div class="flex flex-row md:flex-col justify-between mx-2 md:mx-0 mt-2 md:mt-4">
+                        <ul class="flex justify-end">
+                            <li v-for="used of project.builtwith" :key="used" class="mx-2 font-mono text-xs">{{used}}</li>
+                        </ul>
+                        <div class="flex md:my-4 md:mx-2 justify-end">
+                            <img :src="darkMode ? link_yellow: link_red" class="h-4 cursor-pointer" @click="newtab(project.href)"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import link_yellow from '../assets/link_yellow.png';
+import link_red from '../assets/link_red.png';
+import justgimme from '../assets/projects/justgimme.jpg';
+import justgimme_dark from '../assets/projects/justgimme_dark.jpg';
+import justgimme_light from '../assets/projects/justgimme_light.jpg';
+
+const props = defineProps({
+  darkMode: Boolean
+})
+
+const imgMap: any = {
+    "justgimme": {
+        dark: justgimme_dark,
+        light: justgimme_light
+    }
+}
+
+const projects = ref([
+    {
+        name: 'Just Gimme A Password',
+        alt: 'Screenshot for Just Gimme a Password',
+        href: 'https://justgimmeapassword.com',
+        // img: 'justgimme',
+        img: justgimme,
+        description: 'A minimalist password generator for quick password generation. Randomly generates easy-to-remember passwords that satisfies current password security standards.',
+        builtwith: ['Vue 3', 'JS', 'Vercel']
+    }
+])
+
+function getImg(id: string) {
+    if (props.darkMode) {
+        return imgMap[id].dark;
+    } else {
+        return imgMap[id].light;
+    }
+}
+
+function newtab(href: string) {
+    window.open(href, "_blank");
+}
+
+</script>
+
+<style scoped>
+.screenshot {
+    transition: all1s ease;
+    /* background: rgba(255,255,255, 0.5); */
+}
+</style>

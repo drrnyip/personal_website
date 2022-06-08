@@ -15,7 +15,10 @@
       <Skills :darkMode="darkMode" />
     </aos-vue>
     <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-      <experience :darkMode="darkMode" />
+      <Projects :darkMode="darkMode" />
+    </aos-vue>
+    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+      <Experience :darkMode="darkMode" />
     </aos-vue>
     <aos-vue animation="fade-in" :offset="-200" :once="true" placement="center-bottom">
       <Contact :darkMode="darkMode" />
@@ -36,6 +39,7 @@ import Divider from './components/Divider.vue'
 import Lightbulb from './components/Lightbulb.vue';
 import Experience from './components/Experience.vue'
 import Social from './components/Social.vue';
+import Projects from './components/Projects.vue';
 import Contact from './components/Contact.vue';
 import About from './components/About.vue';
 
