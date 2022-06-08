@@ -22,7 +22,7 @@
                     creating engaging and memorable digital experiences for people.
                 </p>
                 <br />
-                <p>My interests are music, traveling, reading & RPG games. When not in front of a computer, I can usually be found in front of a piano, or with my nose in a
+                <p>My interests are music, traveling, reading & RPG games. When not in front of a computer, I can usually be found in front of a piano or with my nose in a
                     book.</p>
             </div>
         </div>
