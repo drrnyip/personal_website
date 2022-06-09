@@ -1,7 +1,6 @@
 <template>
     <div id="projects" class="py-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-50">
         <aos-vue animation="fade-in" :once="true" placement="center-bottom" duration="750">
-
             <h2
                 class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
                 Things I've Built
@@ -9,16 +8,13 @@
         </aos-vue>
         <div class="flex flex-col mt-8">
             <div v-for="project of projects" :key="project.name" class="project flex flex-col md:flex-row">
-                <aos-vue animation="fade-right" :once="true" placement="center-bottom" duration="750">
-                    <div
-                        class="screenshot rounded border-red-700 dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
-                        <img :src="project.img"
-                            class="object-contain h-full w-full mix-blend-difference hover:mix-blend-saturate backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness "
-                            :alt="project.alt" @click="newtab(project.href)" />
-                    </div>
+                <aos-vue animation="fade-right" :once="true" placement="center-bottom" duration="750"
+                    class="screenshot rounded border-green-200 mix-blend-difference hover:mix-blend-saturate dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
+                    <img :src="project.img"
+                        class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness "
+                        :alt="project.alt" @click="newtab(project.href)" />
                 </aos-vue>
-                <aos-vue animation="fade-left" :once="true" placement="center-bottom" duration="750">
-                    <div class="details basis-2/5 flex-1 px-4 md:px-0 text-left md:text-right z-10">
+                <aos-vue animation="fade-left" :once="true" placement="center-bottom" duration="750" class="details basis-2/5 flex-1 px-4 md:px-0 text-left md:text-right z-10">
                         <a :href="project.href" target="_blank">
                             <h1
                                 class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">
@@ -39,7 +35,6 @@
                                     @click="newtab(project.href)" />
                             </div>
                         </div>
-                    </div>
                 </aos-vue>
             </div>
         </div>
