@@ -2,25 +2,29 @@
 <template>
   <div id="skills" class="py-12 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-7xl px-4 md:px-0">
-      <h2
-        class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
-        Skills</h2>
-      <div class="mt-10">
-        <!-- <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"> -->
-        <dl class="flex flex-col md:flex-row flex-wrap justify-around">
-          <div v-for="skill in skills" :key="skill.name" class="relative basis-1/2 mt-4 mx-2 md:mx-0">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
-                <img class="h-8 lg:h-12" :src="darkMode ? skill.darkImg : skill.lightImg" />
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-800 dark:text-gray-50 ">
-              {{ skill.description }}
-            </dd>
-          </div>
-        </dl>
-      </div>
+      <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+        <h2
+          class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
+          Skills</h2>
+      </aos-vue>
+      <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750">
+        <div class="mt-10">
+          <!-- <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"> -->
+          <dl class="flex flex-col md:flex-row flex-wrap justify-around">
+            <div v-for="skill in skills" :key="skill.name" class="relative basis-1/2 mt-4 mx-2 md:mx-0">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
+                  <img class="h-8 lg:h-12" :src="darkMode ? skill.darkImg : skill.lightImg" />
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-800 dark:text-gray-50 ">
+                {{ skill.description }}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </aos-vue>
     </div>
   </div>
 </template>
@@ -69,7 +73,7 @@ const skills = [
     lightImg: database_redPng,
     darkImg: database_yellowPng,
   },
-    {
+  {
     name: 'Cloud',
     description:
       'Docker, Kubernetes, Helm, AWS, GCP',
@@ -77,7 +81,7 @@ const skills = [
     lightImg: cloud_redPng,
     darkImg: cloud_yellowPng,
   },
-    {
+  {
     name: 'Version Control',
     description:
       'Git, GitHub',

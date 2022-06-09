@@ -1,26 +1,16 @@
 <template>
   <Navbar :darkMode="darkMode" />
   <Lightbulb :darkMode="darkMode" @toggleDarkMode="toggleDarkMode" />
-  <aos-vue animation="fade-in" :once="true" :delay="1000" :duration="1500" placement="center-bottom">
-    <Landing :darkMode="darkMode" />
-  </aos-vue>
+  <Landing :darkMode="darkMode" />
   <aos-vue animation="fade-in" :once="true" placement="top-center">
     <Divider :darkMode="darkMode" />
   </aos-vue>
   <div class="mx-2 sm:mx-8 md:mx-12 lg:mx-24 xl:mx-36 2xl:mx-80">
-    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-      <About :darkMode="darkMode" />
-    </aos-vue>
-    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-      <Skills :darkMode="darkMode" />
-    </aos-vue>
-    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-      <Projects :darkMode="darkMode" />
-    </aos-vue>
-    <aos-vue animation="fade-in" :once="true" placement="center-bottom">
-      <Experience :darkMode="darkMode" />
-    </aos-vue>
-    <aos-vue animation="fade-in" :offset="-200" :once="true" placement="center-bottom">
+    <About :darkMode="darkMode" />
+    <Skills :darkMode="darkMode" />
+    <Projects :darkMode="darkMode" />
+    <Experience :darkMode="darkMode" />
+    <aos-vue animation="fade-up" :offset="-200" :once="true" placement="center-bottom" duration="750">
       <Contact :darkMode="darkMode" />
     </aos-vue>
   </div>

@@ -27,7 +27,7 @@ watch(() => props.darkMode, async (curr, prev) => {
 })
 
 onMounted(() => {
-    resetDraw(2500);
+    resetDraw(1000);
 })
 
 function resetDraw(customDelay) {
