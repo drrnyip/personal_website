@@ -20,6 +20,7 @@ const props = defineProps({
 })
 
 let drawCurtain = ref(false);
+let initialDelay = 2000;
 let delay = 250; // milliseconds
 
 watch(() => props.darkMode, async (curr, prev) => {
@@ -27,7 +28,7 @@ watch(() => props.darkMode, async (curr, prev) => {
 })
 
 onMounted(() => {
-    resetDraw(1000);
+    resetDraw(initialDelay);
 })
 
 function resetDraw(customDelay) {

@@ -7,8 +7,7 @@
           class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
           Skills</h2>
       </aos-vue>
-      <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750">
-        <div class="mt-10">
+      <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750" class="mt-10">
           <!-- <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"> -->
           <dl class="flex flex-col md:flex-row flex-wrap justify-around">
             <div v-for="skill in skills" :key="skill.name" class="relative basis-1/2 mt-4 mx-2 md:mx-0">
@@ -23,7 +22,6 @@
               </dd>
             </div>
           </dl>
-        </div>
       </aos-vue>
     </div>
   </div>
