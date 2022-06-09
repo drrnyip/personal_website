@@ -14,7 +14,7 @@
                         class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness "
                         :alt="project.alt" @click="newtab(project.href)" />
                 </aos-vue>
-                <aos-vue animation="fade-left" :once="true" placement="center-bottom" duration="750" class="details basis-2/5 flex-1 px-4 md:px-0 text-left md:text-right z-10">
+                <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750" class="details basis-2/5 flex-1 px-4 md:px-0 text-left md:text-right z-10">
                         <a :href="project.href" target="_blank">
                             <h1
                                 class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">

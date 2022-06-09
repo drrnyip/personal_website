@@ -8,7 +8,7 @@
                 Hello, my name is Darren</h3>
                 </aos-vue>
             <br />
-            <aos-vue animation="fade-left" :once="true" placement="top-bottom" duration="750" easing="ease" delay="500">
+            <aos-vue animation="fade-up" :once="true" placement="top-bottom" duration="750" easing="ease" delay="500">
             <h3
                 class="text-6xl md:text-7xl lg:text-8xl font-serif text-gray-800 dark:text-gray-50 tracking-widest font-semibold">
                 I create websites</h3>
