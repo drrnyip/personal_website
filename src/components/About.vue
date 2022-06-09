@@ -24,8 +24,7 @@
                         I've been building web applications since 2015 to create engaging and memorable digital
                         experiences. In recent years, I have had the privilege of working for <a
                             href="https://www.checkmate.digital" class="underline" target="_blank">local startups</a>
-                        as well as <a class="underline" href="https://www.nyse.com/index" target="_blank">working on Wall
-                            Street</a>.
+                        and <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a>.
                     </p>
                     <br />
                     <p>My other passions include music, traveling, reading & RPG games. When not in front of a computer,
