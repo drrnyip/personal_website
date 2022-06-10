@@ -7,9 +7,9 @@
                 About Me</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row my-10">
-            <aos-vue animation="fade-down" :once="true" placement="center-bottom" duration="750">
+            <aos-vue animation="fade-down" :once="true" placement="center-bottom" duration="750" class="flex justify-around flex-row md:flex-col">
                 <div
-                    class="m-auto md:mt-[35%] md:mr-8 h-48 w-48 ring-2 ring-red-700 dark:ring-yellow-500 rounded-full bg-red-500">
+                    class="md:mr-8 h-48 w-48 ring-2 ring-red-700 dark:ring-yellow-500 rounded-full bg-red-500">
                     <img src="../assets/logo.png" class="" />
                 </div>
             </aos-vue>
