@@ -109,7 +109,7 @@ function resetDraw(customDelay) {
 .draw-curtain {
     animation: drawcurtain 0.35s linear 0s 1;
     animation-fill-mode: forwards;
-        transform-origin: right;
+    transform-origin: right;
 }
 
 @keyframes drawcurtain {

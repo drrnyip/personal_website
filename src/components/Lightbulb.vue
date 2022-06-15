@@ -1,14 +1,14 @@
 <template>
     <div id="bulbcontainer"
         class="fixed right-8 sm:right-12 md:right-14 lg:right-24 xl:right-36 2xl:right-52 -top-28 dark:-top-32 dark:hover:-top-28 hover:-top-28 md:top-0 md:dark:-top-4 md:dark:hover:top-0 md:hover:top-0 items-center pr-2 h-fit"
-        :class="{ entry: entered }" @click="emitDarkMode" @mouseover="activateHint" @mouseleave="deactivateHint">
+        :class="{ entry: entered }" @click="emitDarkMode">
         <span class="sr-only">Toggle dark mode</span>
         <div id="switch" class="bg-gray-600"></div>
         <img id="bulb" class="h-8 w-8 rotate-180" :src="darkMode ? (flickering) ? lightOn : lightOff : lightOn"
             aria-hidden="true" />
-        <div id="lightbulb-hint" class="font-sans text-center tracking-tight font-medium text-sm w-[80px] text-gray-800 dark:text-gray-50"
-            :class="{ show: !clickedAtLeastOnce && showHint }">
-            <span>Too dark?</span>
+        <div v-if="!clickedAtLeastOnce && showHint" id="lightbulb-hint"
+            class="font-sans text-center tracking-tight font-medium text-sm w-[80px] text-gray-800 dark:text-gray-50">
+            <span>{{ darkMode ? "Too dark?" : "Too bright?" }}</span>
             <br />
             <span>Hit the lights</span>
         </div>
@@ -28,7 +28,7 @@ const flickering = ref(false);
 const entered = ref(false);
 const clickedAtLeastOnce = ref(false);
 const showHint = ref(false);
-const showHintInitialDelay = 15000; // in ms
+const showHintInitialDelay = 5000; // in ms
 
 onMounted(() => {
     setTimeout(() => {
@@ -44,9 +44,6 @@ onMounted(() => {
     // Show hint after set delay
     setTimeout(() => {
         showHint.value = true;
-        setTimeout(() => {
-            showHint.value = false;
-        }, 5000)
     }, showHintInitialDelay);
 })
 
@@ -56,14 +53,6 @@ function emitDarkMode() {
     clickedAtLeastOnce.value = true;
     emits('toggleDarkMode', true);
 }
-
-function activateHint() {
-    showHint.value = true;
-}
-
-function deactivateHint() {
-    showHint.value = false;
-}
 </script>
 
 <style scoped>
@@ -71,7 +60,7 @@ function deactivateHint() {
     width: 50px;
     cursor: pointer;
     z-index: 50;
-    transition: all 0.75s ease-in-out;
+    transition: all 0.25s ease;
     transform: translateY(-200%);
 }
 
@@ -94,16 +83,34 @@ function deactivateHint() {
     cursor: pointer;
 }
 
-#lightbulb-hint {
-    transition: all 0.5s ease;
+#bulbcontainer>#lightbulb-hint {
     margin-left: -50%;
     margin-top: 10px;
-    transform: translateY(-25%);
-    opacity: 0;
+    animation: appear 10s ease;
+    animation-fill-mode: forwards;
 }
 
-.show {
-    opacity: 1 !important;
-    transform: translateY(0%) !important;
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-25%);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-25%);
+        display: none;
+    }
 }
+
 </style>
