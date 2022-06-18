@@ -52,6 +52,7 @@ function resetDraw(customDelay) {
         background-size: 100% 50% !important;
         background-position: 0% 35% !important;
     }
+
     .stroke {
         background-size: 50% 15% !important;
         background-position: 50% 90% !important;
@@ -63,6 +64,7 @@ function resetDraw(customDelay) {
         background-size: 100% 70% !important;
         background-position: 0% 40% !important;
     }
+
     .stroke {
         background-size: 50% 15% !important;
         background-position: 50% 90% !important;
@@ -75,6 +77,7 @@ function resetDraw(customDelay) {
         background-size: 90% 80% !important;
         background-position: 0% 55% !important;
     }
+
     .stroke {
         background-size: 50% 15% !important;
         background-position: 50% 90% !important;
@@ -87,6 +90,7 @@ function resetDraw(customDelay) {
         background-size: 90% 80% !important;
         background-position: 0% 75% !important;
     }
+
     .stroke {
         background-size: 50% 15% !important;
         background-position: 50% 90% !important;
@@ -100,30 +104,28 @@ function resetDraw(customDelay) {
 .curtain {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
 
 .draw-curtain {
-    animation: drawcurtain 0.35s linear 0s 1;
+    animation: drawcurtain 0.25s linear;
     animation-fill-mode: forwards;
-    transform-origin: right;
 }
 
 @keyframes drawcurtain {
     0% {
-        transform: translateX(0%);
+        width: 100%;
     }
-    60% {
-        transform: translateX(70%) scaleX(0.5);
+
+    50% {
+        width: 20%;
     }
-    80% {
-        transform: translateX(90%) scaleX(0);
-    }
+
     100% {
-        transform: translateX(0%) scaleX(0);
+        width: 0%;
     }
 }
 
