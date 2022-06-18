@@ -28,7 +28,7 @@ const flickering = ref(false);
 const entered = ref(false);
 const clickedAtLeastOnce = ref(false);
 const showHint = ref(false);
-const showHintInitialDelay = 5000; // in ms
+const showHintInitialDelay = 10000; // in ms
 
 onMounted(() => {
     setTimeout(() => {
@@ -86,7 +86,7 @@ function emitDarkMode() {
 #bulbcontainer>#lightbulb-hint {
     margin-left: -50%;
     margin-top: 10px;
-    animation: appear 10s ease;
+    animation: appear 5s ease;
     animation-fill-mode: forwards;
 }
 
