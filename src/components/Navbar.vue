@@ -17,10 +17,10 @@
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <aos-vue animation="fade-down" :once="true" :delay="250">
             <div class="flex-shrink-0 flex items-center">
-              <img class="block lg:hidden h-10 w-auto" src="../assets/logo.png" alt="Darren Yip" />
-              <img class="hidden lg:block h-10 w-auto" src="../assets/logo.png" alt="Darren Yip" />
+              <img class="block lg:hidden h-10 w-auto" :src="getLogo()" alt="Darren Yip" />
+              <img class="hidden lg:block h-10 w-auto" :src="getLogo()" alt="Darren Yip" />
               <h3
-                class="hidden lg:block ml-6 tracking-wider font-sans font-bold text-xl text-gray-800 dark:text-gray-50 cursor-default">
+                class="hidden lg:block ml-6 tracking-widest font-sans font-bold text-xl text-gray-800 dark:text-gray-50 cursor-default">
                 Darren Yip</h3>
             </div>
           </aos-vue>
@@ -53,6 +53,9 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { LightBulbIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { LightBulbIcon as LightBulbSolid } from '@heroicons/vue/solid'
+import logoLight from "../assets/logo-light.png";
+import logoDark from "../assets/logo-dark.png";
+import portrait from "../assets/portrait.png";
 
 const props = defineProps({
   darkMode: Boolean
@@ -70,6 +73,10 @@ const navigation = [
 function scrollTo(event, target) {
   event.preventDefault();
   document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+}
+
+function getLogo() {
+  return props.darkMode ? logoLight : logoDark;
 }
 </script>
 
