@@ -7,34 +7,41 @@
             </h2>
         </aos-vue>
         <div class="flex flex-col mt-8">
-            <div v-for="project of projects" :key="project.name" class="project flex flex-col md:flex-row">
-                <aos-vue animation="fade-right" :once="true" placement="center-bottom" duration="750"
+            <div v-for="(project, index) in projects" :key="project.name" class="project flex flex-col md:flex-row mb-12">
+                <aos-vue v-if="index % 2 == 0" animation="fade-right" :once="true" placement="center-bottom" duration="750"
                     class="screenshot rounded border-cyan-400 mix-blend-difference hover:mix-blend-saturate dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
                     <img :src="project.img"
-                        class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness "
+                        class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness"
                         :alt="project.alt" @click="newtab(project.href)" />
                 </aos-vue>
-                <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750" class="details basis-2/5 flex-1 px-4 md:px-0 text-left md:text-right z-10">
-                        <a :href="project.href" target="_blank">
-                            <h1
-                                class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">
-                                {{ project.name }}</h1>
-                        </a>
-                        <p
-                            class="w-full md:w-[120%] md:ml-[-20%] text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900">
-                            {{ project.description }}</p>
-                        <div
-                            class="deets relative flex flex-row justify-between md:justify-end px-0 md:px-2 mx-2 md:mx-0 mt-2 md:mt-4">
-                            <ul class="flex justify-around">
-                                <li v-for="used of project.builtwith" :key="used" class="mx-2 font-mono text-xs">{{ used
-                                }}
-                                </li>
-                            </ul>
-                            <div class="flex md:mx-2 justify-around">
-                                <img :src="darkMode ? link_yellow : link_red" class="h-4 cursor-pointer"
-                                    @click="newtab(project.href)" />
-                            </div>
+                <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750"
+                    class="details basis-2/5 flex-1 px-4 md:px-0 text-left z-10" :class="{'md:text-right': index % 2 == 0, 'md:text-left': index % 2 != 0}">
+                    <a :href="project.href" target="_blank">
+                        <h1
+                            class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">
+                            {{ project.name }}</h1>
+                    </a>
+                    <p
+                        class="w-full md:w-[120%] text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900" :class="{'md:ml-[-20%]': index % 2 == 0, 'md:mr-[-20%]': index % 2 != 0}">
+                        {{ project.description }}</p>
+                    <div
+                        class="deets relative flex flex-row justify-between px-0 md:px-2 mx-2 md:mx-0 mt-2 md:mt-4" :class="{'md:justify-end': index % 2 == 0, 'md:justify-start': index % 2 != 0}">
+                        <ul class="flex justify-around">
+                            <li v-for="used of project.builtwith" :key="used" class="mx-2 font-mono text-xs">{{ used
+                            }}
+                            </li>
+                        </ul>
+                        <div class="flex md:mx-2 justify-around">
+                            <img :src="darkMode ? link_yellow : link_red" class="h-4 cursor-pointer"
+                                @click="newtab(project.href)" />
                         </div>
+                    </div>
+                </aos-vue>
+                <aos-vue v-if="index % 2 != 0" animation="fade-right" :once="true" placement="center-bottom" duration="750"
+                    class="screenshot rounded border-cyan-400 mix-blend-difference hover:mix-blend-saturate dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
+                    <img :src="project.img"
+                        class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness"
+                        :alt="project.alt" @click="newtab(project.href)" />
                 </aos-vue>
             </div>
         </div>
@@ -44,42 +51,33 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import justgimme from '../assets/projects/justgimme.jpg';
+import thoddle from '../assets/projects/thoddle.jpg';
 import link_yellow from '../assets/link_yellow.png';
 import link_red from '../assets/link_red.png';
-import justgimme from '../assets/projects/justgimme.jpg';
-import justgimme_dark from '../assets/projects/justgimme_dark.jpg';
-import justgimme_light from '../assets/projects/justgimme_light.jpg';
 
 const props = defineProps({
     darkMode: Boolean
 })
-
-const imgMap: any = {
-    "justgimme": {
-        dark: justgimme_dark,
-        light: justgimme_light
-    }
-}
 
 const projects = ref([
     {
         name: 'Just Gimme A Password',
         alt: 'Screenshot for Just Gimme a Password',
         href: 'https://justgimmeapassword.com',
-        // img: 'justgimme',
         img: justgimme,
         description: 'A progressive web application for quickly generating passwords. Randomly generates easy-to-remember passwords that satisfies modern security standards.',
         builtwith: ['Vue 3', 'JS', 'PWA', 'Vercel']
+    },
+    {
+        name: 'Thoddle',
+        alt: 'Screenshot for Thoddle',
+        href: 'https://thoddle.vercel.app',
+        img: thoddle,
+        description: 'Infinitely replayable Wordle for people who find the original too difficult. Forked from a popular open-source project and inspired by Wheel of Fortune.',
+        builtwith: ['React']
     }
 ])
-
-function getImg(id: string) {
-    if (props.darkMode) {
-        return imgMap[id].dark;
-    } else {
-        return imgMap[id].light;
-    }
-}
 
 function newtab(href: string) {
     window.open(href, "_blank");
