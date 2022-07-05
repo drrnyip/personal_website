@@ -40,7 +40,7 @@
     </div>
 
     <DisclosurePanel class="sm:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
+      <div class="px-2 pt-2 pb-3 space-y-1 w-full bg-gray-100 dark:bg-gray-800 z-50 absolute">
         <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
           class="text-gray-800 dark:text-gray-50 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           @click="scrollTo($event, item.href)">{{ item.name }}
