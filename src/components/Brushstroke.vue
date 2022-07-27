@@ -52,7 +52,7 @@ function resetDraw(customDelay) {
 
 @media only screen and (max-width: 480px) {
     .highlight {
-        top: 20% !important;
+        top: 12% !important;
         height: 60% !important;
         width: 100% !important;
     }
