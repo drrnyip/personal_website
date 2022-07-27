@@ -1,7 +1,8 @@
 <template>
-    <div id="headings"
-        :class="{ 'brush-yellow': !darkMode, 'brush-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }">
+    <div id="headings">
         <div class="curtain bg-gray-100 dark:bg-gray-800" :class="{ 'draw-curtain': drawCurtain }"></div>
+        <img :src="brush_yellow" class="absolute h-4/5 top-8 w-full z-[-10]"
+            :class="{ 'yellow-to-red': darkMode, highlight: style == 'highlight', stroke: style == 'stroke' }" />
         <div class="contents">
             <slot></slot>
         </div>
@@ -11,6 +12,8 @@
 
 <script setup>
 import { onMounted, ref, watch } from 'vue';
+import brush_yellow from '../assets/brush_yellow.png';
+
 const props = defineProps({
     darkMode: Boolean,
     style: {
@@ -49,51 +52,67 @@ function resetDraw(customDelay) {
 
 @media only screen and (max-width: 480px) {
     .highlight {
-        background-size: 100% 50% !important;
-        background-position: 0% 35% !important;
+        top: 20% !important;
+        height: 60% !important;
+        width: 100% !important;
     }
 
     .stroke {
-        background-size: 50% 15% !important;
-        background-position: 50% 90% !important;
+        height: 15% !important;
+        top: unset !important;
+        bottom: 0.5rem !important;
+        left: 13% !important;
+        width: 75% !important;
     }
 }
 
 @media only screen and (min-width: 481px) {
     .highlight {
-        background-size: 100% 70% !important;
-        background-position: 0% 40% !important;
+        top: 15% !important;
+        height: 75% !important;
+        width: 100% !important;
     }
 
     .stroke {
-        background-size: 50% 15% !important;
-        background-position: 50% 90% !important;
+        height: 15% !important;
+        top: unset !important;
+        bottom: 0.5rem !important;
+        left: 25% !important;
+        width: 50% !important;
     }
 
 }
 
 @media only screen and (min-width: 768px) {
     .highlight {
-        background-size: 90% 80% !important;
-        background-position: 0% 55% !important;
+        top: 10% !important;
+        height: 80% !important;
+        width: 100% !important;
     }
 
     .stroke {
-        background-size: 50% 15% !important;
-        background-position: 50% 90% !important;
+        height: 15% !important;
+        top: unset !important;
+        bottom: 0.5rem !important;
+        left: 25% !important;
+        width: 50% !important;
     }
 
 }
 
 @media only screen and (min-width: 1024px) {
     .highlight {
-        background-size: 90% 80% !important;
-        background-position: 0% 75% !important;
+        top: 10% !important;
+        height: 90% !important;
+        width: 90% !important;
     }
 
     .stroke {
-        background-size: 50% 15% !important;
-        background-position: 50% 90% !important;
+        height: 15% !important;
+        top: unset !important;
+        bottom: 0 !important;
+        left: 25% !important;
+        width: 50% !important;
     }
 }
 
@@ -129,11 +148,7 @@ function resetDraw(customDelay) {
     }
 }
 
-.brush-yellow {
-    background: url('../assets/brush_yellow.png');
-}
-
-.brush-red {
-    background: url('../assets/brush_red.png');
+.yellow-to-red {
+    filter: invert(1) hue-rotate(-220deg);
 }
 </style>

@@ -10,7 +10,7 @@
     <Skills :darkMode="darkMode" />
     <Projects :darkMode="darkMode" />
     <Experience :darkMode="darkMode" />
-    <aos-vue animation="fade-up" :offset="-200" :once="true" placement="center-bottom" duration="750">
+    <aos-vue animation="fade-up" :offset="-200" :once="true" placement="center-bottom" :duration="750">
       <Contact :darkMode="darkMode" />
     </aos-vue>
   </div>

@@ -7,13 +7,13 @@
           class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
           Skills</h2>
       </aos-vue>
-      <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750" class="mt-10">
+      <aos-vue animation="fade-up" :once="true" placement="center-bottom" :duration="750" class="mt-10">
         <!-- <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"> -->
         <dl class="flex flex-col md:flex-row flex-wrap justify-around">
           <div v-for="skill in skills" :key="skill.name" class="relative basis-1/2 mt-4 mx-2 md:mx-0">
             <dt>
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
-                <img class="h-8 lg:h-12" :src="skill.img" :class="{ invert: !darkMode }" />
+                <img class="h-8 lg:h-12" :src="skill.img" :class="{ 'yellow-to-red': !darkMode }" />
               </div>
               <p class="ml-16 text-lg leading-6 font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
             </dt>
@@ -85,7 +85,7 @@ const skills = [
 </script>
 
 <style scoped>
-.invert {
+.yellow-to-red {
   filter: invert(1) hue-rotate(-200deg)
 }
 </style>

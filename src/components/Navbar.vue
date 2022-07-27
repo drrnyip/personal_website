@@ -17,7 +17,7 @@
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <aos-vue animation="fade-down" :once="true" :delay="250">
             <div class="flex-shrink-0 flex items-center">
-              <img class="h-10 w-auto" :class="{invert: !darkMode}" :src="logoLight" alt="Darren Yip" />
+              <img class="h-10 w-auto" :class="{'yellow-to-red': !darkMode}" :src="logoLight" alt="Darren Yip" />
               <h3
                 class="hidden lg:block ml-6 tracking-widest font-sans font-bold text-xl text-gray-800 dark:text-gray-50 cursor-default">
                 Darren Yip</h3>
@@ -102,7 +102,7 @@ function scrollTo(event, target) {
   cursor: pointer;
 }
 
-.invert {
+.yellow-to-red {
   filter: invert(1);
 }
 </style>

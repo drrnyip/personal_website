@@ -6,7 +6,7 @@
                 Where I've Worked</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-0 justify-around tablist py-5">
-            <aos-vue animation="fade-right" :once="true" placement="center-bottom" duration="750"
+            <aos-vue animation="fade-right" :once="true" placement="center-bottom" :duration="750"
                 class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
                 <ul
                     class="flex flex-row justify-around w-[90vw] md:w-full md:flex-col border-b-4 md:border-b-0 md:border-l-4 md:mr-5 md:pr-5">
@@ -25,7 +25,7 @@
                     :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
             </aos-vue>
             <br class="block md:hidden" />
-            <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750"
+            <aos-vue animation="fade-up" :once="true" placement="center-bottom" :duration="750"
                 class="flex flex-col h-fit min-h-[55vh] md:min-h-[50vh] lg:min-h-[40vh] w-fit md:w-[50vw] p-2">
                 <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title
                 }}</span> |

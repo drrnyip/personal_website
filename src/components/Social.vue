@@ -5,7 +5,7 @@
             class="icon relative font-sans tracking-wider mb-6 mx-4 md:mx-0 hover:scale-125 transition-transform"
             @mouseenter="setHover(icon.id)" @mouseleave="stopHover(icon.id)">
             <a :alt="icon.id" :href="icon.href" class="" target="_blank">
-                <img :src="icon.img" class="h-6 w-6" :class="{invert: !darkMode}" />
+                <img :src="icon.img" class="h-6 w-6" :class="{'yellow-to-red': !darkMode}" />
             </a>
             <p class="tooltip absolute cursor-pointer hidden md:block text-xs text-gray-800 dark:text-gray-50" :class="{ show: isHovering[icon.id] }">{{
                     icon.description
@@ -124,7 +124,7 @@ function stopHover(id) {
     transform: translateY(0%);
 }
 
-.invert {
+.yellow-to-red {
   filter: invert(1) hue-rotate(-200deg)
 }
 </style>

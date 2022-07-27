@@ -1,19 +1,19 @@
 <template>
     <div id="about" class="py-12 bg-gray-100 dark:bg-gray-800">
-        <aos-vue animation="fade-in" :once="true" placement="center-bottom" duration="750"
+        <aos-vue animation="fade-in" :once="true" placement="center-bottom" :duration="750"
             class="flex w-full flex-col md:flex-row">
             <h2
                 class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
                 About Me</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row my-10">
-            <aos-vue animation="fade-down" :once="true" placement="center-bottom" duration="750" class="flex justify-around flex-row md:flex-col">
+            <aos-vue animation="fade-down" :once="true" placement="center-bottom" :duration="750" class="flex justify-around flex-row md:flex-col">
                 <div
                     class="md:mr-8 h-48 w-48 ring-2 ring-red-700 dark:ring-yellow-500 rounded-full bg-red-500">
                     <img src="../assets/logo.png" class="" />
                 </div>
             </aos-vue>
-            <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750">
+            <aos-vue animation="fade-up" :once="true" placement="center-bottom" :duration="750">
                 <div
                     class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                     <p>

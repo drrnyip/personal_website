@@ -1,6 +1,5 @@
 <template>
-  <img v-if="darkMode" class="w-full h-3 mx-auto" src="../assets/brush_red.png" />
-  <img v-if="!darkMode" class="w-full h-3 mx-auto" src="../assets/brush_yellow.png" />
+  <img class="w-full h-3 mx-auto" src="../assets/brush_yellow.png" :class="{invert: darkMode}" />
 </template>
 
 <script setup>
@@ -10,4 +9,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.invert {
+  filter: invert(1) hue-rotate(-220deg);
+}
 </style>
