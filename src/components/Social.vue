@@ -5,7 +5,7 @@
             class="icon relative font-sans tracking-wider mb-6 mx-4 md:mx-0 hover:scale-125 transition-transform"
             @mouseenter="setHover(icon.id)" @mouseleave="stopHover(icon.id)">
             <a :alt="icon.id" :href="icon.href" class="" target="_blank">
-                <img :src="darkMode ? icon.darkImg : icon.lightImg" class="h-6 w-6" />
+                <img :src="icon.img" class="h-6 w-6" :class="{invert: !darkMode}" />
             </a>
             <p class="tooltip absolute cursor-pointer hidden md:block text-xs text-gray-800 dark:text-gray-50" :class="{ show: isHovering[icon.id] }">{{
                     icon.description
@@ -19,13 +19,9 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import mailYellow from "../assets/mail_yellow.png";
-import mailRed from "../assets/mail_red.png";
 import githubYellow from "../assets/github_yellow.png";
-import githubRed from "../assets/github_red.png";
 import linkedinYellow from "../assets/linkedin_yellow.png";
-import linkedinRed from "../assets/linkedin_red.png";
 import cvYellow from "../assets/cv_yellow.png";
-import cvRed from "../assets/cv_red.png";
 
 const props = defineProps({
     darkMode: Boolean
@@ -45,29 +41,25 @@ const icons = [
         id: "cv",
         description: "Resume",
         href: "https://drive.google.com/file/d/1a9VnTYdrQKKPBBE3rh0sJ7ARW4JBvyVZ/view?usp=sharing",
-        lightImg: cvRed,
-        darkImg: cvYellow,
+        img: cvYellow,
     },
     {
         id: "envelope",
         description: "Email",
         href: "mailto:drrnyip@gmail.com",
-        lightImg: mailRed,
-        darkImg: mailYellow,
+        img: mailYellow,
     },
     {
         id: "github",
         description: "GitHub",
         href: "https://github.com/drrnyip",
-        lightImg: githubRed,
-        darkImg: githubYellow,
+        img: githubYellow,
     },
     {
         id: "linkedin",
         description: "LinkedIn",
         href: "https://www.linkedin.com/in/drrnyip/",
-        lightImg: linkedinRed,
-        darkImg: linkedinYellow,
+        img: linkedinYellow,
     },
 
 ]
@@ -130,5 +122,9 @@ function stopHover(id) {
 
 #social.entry {
     transform: translateY(0%);
+}
+
+.invert {
+  filter: invert(1) hue-rotate(-200deg)
 }
 </style>

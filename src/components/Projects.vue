@@ -7,37 +7,41 @@
             </h2>
         </aos-vue>
         <div class="flex flex-col mt-8">
-            <div v-for="(project, index) in projects" :key="project.name" class="project flex flex-col md:flex-row mb-12">
-                <aos-vue v-if="index % 2 == 0" animation="fade-right" :once="true" placement="center-bottom" duration="750"
+            <div v-for="(project, index) in projects" :key="project.name"
+                class="project flex flex-col md:flex-row mb-12">
+                <aos-vue v-if="index % 2 == 0" animation="fade-right" :once="true" placement="center-bottom"
+                    duration="750"
                     class="screenshot rounded border-cyan-400 mix-blend-difference hover:mix-blend-saturate dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
                     <img :src="project.img"
                         class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness"
                         :alt="project.alt" @click="newtab(project.href)" />
                 </aos-vue>
                 <aos-vue animation="fade-up" :once="true" placement="center-bottom" duration="750"
-                    class="details basis-2/5 flex-1 px-4 md:px-0 text-left z-10" :class="{'md:text-right': index % 2 == 0, 'md:text-left': index % 2 != 0}">
+                    class="details basis-2/5 flex-1 px-4 md:px-0 text-left z-10"
+                    :class="{ 'md:text-right': index % 2 == 0, 'md:text-left': index % 2 != 0 }">
                     <a :href="project.href" target="_blank">
                         <h1
                             class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">
                             {{ project.name }}</h1>
                     </a>
-                    <p
-                        class="w-full md:w-[120%] text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900" :class="{'md:ml-[-20%]': index % 2 == 0, 'md:mr-[-20%]': index % 2 != 0}">
+                    <p class="w-full md:w-[120%] text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900"
+                        :class="{ 'md:ml-[-20%]': index % 2 == 0, 'md:mr-[-20%]': index % 2 != 0 }">
                         {{ project.description }}</p>
-                    <div
-                        class="deets relative flex flex-row justify-between px-0 md:px-2 mx-2 md:mx-0 mt-2 md:mt-4" :class="{'md:justify-end': index % 2 == 0, 'md:justify-start': index % 2 != 0}">
+                    <div class="deets relative flex flex-row justify-between px-0 md:px-2 mx-2 md:mx-0 mt-2 md:mt-4"
+                        :class="{ 'md:justify-end': index % 2 == 0, 'md:justify-start': index % 2 != 0 }">
                         <ul class="flex justify-around">
                             <li v-for="used of project.builtwith" :key="used" class="mx-2 font-mono text-xs">{{ used
                             }}
                             </li>
                         </ul>
                         <div class="flex md:mx-2 justify-around">
-                            <img :src="darkMode ? link_yellow : link_red" class="h-4 cursor-pointer"
+                            <img :src="link_yellow" class="h-4 cursor-pointer" :class="{ invert: !darkMode }"
                                 @click="newtab(project.href)" />
                         </div>
                     </div>
                 </aos-vue>
-                <aos-vue v-if="index % 2 != 0" animation="fade-right" :once="true" placement="center-bottom" duration="750"
+                <aos-vue v-if="index % 2 != 0" animation="fade-right" :once="true" placement="center-bottom"
+                    duration="750"
                     class="screenshot rounded border-cyan-400 mix-blend-difference hover:mix-blend-saturate dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
                     <img :src="project.img"
                         class="object-contain h-full w-full backdrop-grayscale hover:backdrop-grayscale-0 backdrop-contrast-200 hover:backdrop-contrast-100 backdrop-brightness-sm hover:backdrop-brightness"
@@ -54,7 +58,6 @@ import { ref } from "vue";
 import justgimme from '../assets/projects/justgimme.jpg';
 import thoddle from '../assets/projects/thoddle.jpg';
 import link_yellow from '../assets/link_yellow.png';
-import link_red from '../assets/link_red.png';
 
 const props = defineProps({
     darkMode: Boolean
@@ -98,4 +101,8 @@ function newtab(href: string) {
     border-right: 2px #111827 solid;
     border-bottom: 2px #111827 solid;
 } */
+
+.invert {
+    filter: invert(1) hue-rotate(-200deg);
+}
 </style>
