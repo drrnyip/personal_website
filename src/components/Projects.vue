@@ -67,7 +67,7 @@ const projects = ref([
     {
         name: 'Just Gimme A Password',
         alt: 'Screenshot for Just Gimme a Password',
-        href: 'https://justgimmeapassword.com',
+        href: 'https://justgimmepw.com',
         img: justgimme,
         description: 'A progressive web application for quickly generating passwords. Randomly generates easy-to-remember passwords that satisfies modern security standards.',
         builtwith: ['Vue 3', 'JS', 'PWA', 'Vercel']
