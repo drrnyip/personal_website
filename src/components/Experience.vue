@@ -63,12 +63,10 @@ const experiences = [
         title: "Developer",
         employer: "New York Stock Exchange",
         description: [
-            "Joined as part of acquisition of Hercules Solutions.",
-            "Migrated application from GCP to company’s internally regulated AWS cloud.",
-            "Collaborated with management and QA teams to test and integrate application with existing company infrastructure.",
-            "Migrated and rewrote frontend codebase from Vue 2 to Vue 3, including rewriting all components to use Vue 3's Composition API.",
-            "Developed a runbook documenting application's architecture and processes to accelerate onboarding process.",
-
+            "Joined as part of acquisition of Hercules Solutions",
+            "Collaborated with multiple teams to integrate application into internal AWS cloud whilst working closely with infrastructure teams",
+            "Rewrote and performed a major application upgrade to Vue 3, including rewriting all components to use Vue 3's Composition API.",
+            "Authored a runbook for new team members to facilitate a smoother onboarding process."
         ],
         date: '2021 - 2022',
     },
@@ -76,13 +74,14 @@ const experiences = [
         title: "Senior Engineer",
         employer: "Hercules Solutions",
         description: [
-            "Worked in two-man engineering team as a full-stack developer on a secure, scalable fintech platform built on a microservice architecture.",
-            "Proposed, prototyped and developed new features based on business requirements.",
-            "Designed and created robust, reusable Vue.js UI components.",
-            "Configured, tested and deployed new releases across all environments using Kubernetes and Helm and ensured deployment was according to specifications.",
-            "Implemented, tested and deployed SAML-authenticated login using Passport.js and Okta.",
-            "Diagnosed and fixed bugs across all layers of the stack.",
-            "Migrated web application from Angular 2 to Vue 2.",
+            "Worked two-man engineering team as a full-stack developer on a secure, scalable fintech platform built on a microservice architecture",
+            "Proposed and spearheaded new features based on business requirements and client requests",
+            "Designed and developed robust, reusable Vue.js UI components.",
+            "Wrote performant server-side code with unit testing",
+            "Configured, tested and deployed new releases across all environments using Kubernetes and Helm and ensured deployment was according to specifications",
+            "Developed and managed SAML login process for clients using Passport.js and Okta.",
+            "Effectively diagnosed and fixed bugs across all layers of the stack",
+            "Contributed towards migration of application from Angular 2 to Vue.js",
 
         ],
         date: '2019 - 2021',

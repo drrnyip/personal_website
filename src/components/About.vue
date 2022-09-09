@@ -17,7 +17,7 @@
                 <div
                     class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                     <p>
-                        Hi there, my name is Darren Yip, and I'm a software engineer based in New Haven, Connecticut.
+                        Hi there, my name is Darren Yip, and I'm a full-stack software engineer based in the New England area.
                     </p>
                     <br />
                     <p>
