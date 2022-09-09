@@ -42,7 +42,7 @@ const skills = [
   {
     name: 'Languages',
     description:
-      'HTML5, CSS3, JavaScript, Typescript',
+      'HTML5, CSS3, JavaScript, Typescript, bash',
     id: 'code',
     img: code_yellowPng,
   },
@@ -77,7 +77,7 @@ const skills = [
   {
     name: 'Tools',
     description:
-      'Express.js, GraphQL, gRPC, Passport.js, Okta, Mocha.js, Firebase, Adobe Photoshop',
+      'Linux, Express.js, GraphQL, gRPC, Passport.js, Okta, Mocha.js, Firebase, Adobe Photoshop',
     id: 'tools',
     img: tools_yellowPng,
   },
