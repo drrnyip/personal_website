@@ -63,10 +63,9 @@ const experiences = [
         title: "Developer",
         employer: "New York Stock Exchange",
         description: [
-            "Joined as part of acquisition of Hercules Solutions",
-            "Collaborated with multiple teams to integrate application into internal AWS cloud whilst working closely with infrastructure teams",
-            "Rewrote and performed a major application upgrade to Vue 3, including rewriting all components to use Vue 3's Composition API.",
-            "Authored a runbook for new team members to facilitate a smoother onboarding process."
+            "Worked with cloud and infrastructure teams to integrate into secured internal Amazon Web Services (AWS) cloud from existing Google Cloud Platform (GCP) servers",
+            "Performed major upgrade to Vue 3 by rewriting all components to use Vue 3's Composition API, reducing bundle size by 50% and thereby significantly improving loading speeds and web performance",
+            "Authored runbook to facilitate onboarding new team members, cutting down onboarding time in half",
         ],
         date: '2021 - 2022',
     },
@@ -74,14 +73,14 @@ const experiences = [
         title: "Senior Engineer",
         employer: "Hercules Solutions",
         description: [
-            "Worked two-man engineering team as a full-stack developer on a secure, scalable fintech platform built on a microservice architecture",
-            "Proposed and spearheaded new features based on business requirements and client requests",
-            "Designed and developed robust, reusable Vue.js UI components.",
-            "Wrote performant server-side code with unit testing",
-            "Configured, tested and deployed new releases across all environments using Kubernetes and Helm and ensured deployment was according to specifications",
-            "Developed and managed SAML login process for clients using Passport.js and Okta.",
-            "Effectively diagnosed and fixed bugs across all layers of the stack",
-            "Contributed towards migration of application from Angular 2 to Vue.js",
+            "Worked in two-man engineering team to create an enterprise-level secure, scalable fintech platform built on cloud microservice architecture",
+            "Proposed, spearheaded and developed prototype features based on client feedback and integrated into future releases",
+            "Designed and developed robust and reusable Vue.js components, maximizing code re-use and significantly reducing overall size of codebase",
+            "Collaborated with cloud architect to design and implement Node.js/GraphQL/PostgreSQL server-side code",
+            "Wrote and implemented unit tests that provided 95% test coverage for entire API layer",
+            "Configured, tested and deployed production releases using Kubernetes and Helm and ensured SLA level of 99% uptime/availability",
+            "Spearheaded, developed and managed SAML login process for clients and reduced client onboarding time by 60%",
+
 
         ],
         date: '2019 - 2021',
@@ -90,7 +89,8 @@ const experiences = [
         title: "Software Developer",
         employer: "Checkmate Digital",
         description: [
-            "Collaborated with multi-disciplinary teams and clients to create bespoke web applications across myriad industries. Primary tools included  Angular 2/Node.js/Firebase"
+            "Collaborated with UI/UX designers and clients to implement bespoke Angular 2 web applications for clients across myriad industries",
+            "Coached and pair-programmed with junior web developers to help sharpen existing skills and learn new ones",
         ],
         date: '2017 - 2019',
     },

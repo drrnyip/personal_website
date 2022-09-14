@@ -42,14 +42,14 @@ const skills = [
   {
     name: 'Languages',
     description:
-      'HTML5, CSS3, JavaScript, Typescript, bash',
+      'HTML5, JavaScript, TypeScript, bash, GraphQL',
     id: 'code',
     img: code_yellowPng,
   },
   {
     name: 'Libraries / Frameworks',
     description:
-      'Vue.js, Node.js, Bootstrap, TailwindCSS',
+      'Vue.js, Node.js, Express.js, gRPC, Passport.js, Mocha.js, Bootstrap, TailwindCSS, Angular 2',
     id: 'book',
     img: book_yellowPng,
   },
@@ -61,7 +61,7 @@ const skills = [
     img: database_yellowPng,
   },
   {
-    name: 'Cloud',
+    name: 'Cloud Tools',
     description:
       'Docker, Kubernetes, Helm, AWS, GCP',
     id: 'cloud',
@@ -75,9 +75,9 @@ const skills = [
     img: merge_yellowPng,
   },
   {
-    name: 'Tools',
+    name: 'Other Tools',
     description:
-      'Linux, Express.js, GraphQL, gRPC, Passport.js, Okta, Mocha.js, Firebase, Adobe Photoshop',
+      'Linux, Firebase, Adobe Photoshop',
     id: 'tools',
     img: tools_yellowPng,
   },

@@ -40,7 +40,7 @@ const icons = [
     {
         id: "cv",
         description: "Resume",
-        href: "https://drive.google.com/file/d/1gYNghlIIb4XwFR_v1THza7JPHRuVhLKQ/view?usp=sharing",
+        href: "https://drive.google.com/file/d/1acENSe__oldDkhuap7dlmh-YoEC7S5RZ/view",
         img: cvYellow,
     },
     {
