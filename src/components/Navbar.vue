@@ -1,6 +1,6 @@
 <template>
   <Disclosure as="nav" class="bg-gray-100 dark:bg-gray-800" v-slot="{ open }">
-    <div class="max-w-7xl mx-auto px-2">
+    <div class="max-w-7xl ml-2 lg:ml-36 px-2">
       <div class="relative flex items-center justify-between h-16">
         <aos-vue animation="fade-down" :once="true" :delay="250">
 
