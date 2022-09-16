@@ -1,5 +1,5 @@
 <template>
-    <img id="scrollup" :src="UpChevron" class="h-10 w-10 z-10 fixed bottom-12 lg:bottom-12 right-6 lg:right-12 cursor-pointer"
+    <img id="scrollup" :src="UpChevron" class="bg-black dark:bg-gray-800 rounded-full h-10 w-10 z-10 fixed bg- bottom-12 lg:bottom-12 right-6 lg:right-12 cursor-pointer"
         :class="{'yellow-to-red': !darkMode, 'bounce': hovering }" @mouseenter="toggleHover(true)" @mouseleave="toggleHover(false)" @click="scrollTop" />
 </template>
 
