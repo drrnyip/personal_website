@@ -10,6 +10,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.6.2",
     "@heroicons/vue": "^1.0.6",
+    "@vueuse/core": "^9.2.0",
     "aos-vue": "^0.0.5",
     "vue": "^3.2.25"
   },
