@@ -16,10 +16,7 @@
   </div>
   <br />
   <Social :darkMode="darkMode" />
-  <Transition name="popup">
-    <ScrollUp v-if="!navbarIsVisible" :darkMode="darkMode"/>
-  </Transition>
-
+  <ScrollUp :visible="!navbarIsVisible" :darkMode="darkMode"/>
 </template>
 
 
@@ -55,15 +52,4 @@ function toggleDarkMode() {
 </script>
 
 <style>
-
-.popup-enter-active,
-.popup-leave-active {
-  transition: all 0.5s ease;
-}
-
-.popup-enter-from,
-.popup-leave-to {
-  transform: translateY(250%);
-  opacity: 0;
-}
 </style>
