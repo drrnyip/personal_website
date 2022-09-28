@@ -50,6 +50,43 @@ function resetDraw(customDelay) {
     z-index: 5;
 }
 
+.contents {
+    z-index: 10;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.draw-curtain {
+    animation: drawcurtain 0.25s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drawcurtain {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 20%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+.yellow-to-red {
+    filter: invert(1) hue-rotate(-220deg);
+}
+
+
 @media only screen and (max-width: 480px) {
     .highlight {
         top: 12% !important;
@@ -116,39 +153,4 @@ function resetDraw(customDelay) {
     }
 }
 
-.contents {
-    z-index: 10;
-}
-
-.curtain {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.draw-curtain {
-    animation: drawcurtain 0.25s linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drawcurtain {
-    0% {
-        width: 100%;
-    }
-
-    50% {
-        width: 20%;
-    }
-
-    100% {
-        width: 0%;
-    }
-}
-
-.yellow-to-red {
-    filter: invert(1) hue-rotate(-220deg);
-}
 </style>

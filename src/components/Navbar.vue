@@ -76,32 +76,6 @@ function scrollTo(event, target) {
 </script>
 
 <style scoped>
-#bulbcontainer {
-  /* background: lime; */
-  width: 50px;
-  height: 150px;
-  cursor: pointer;
-  position: absolute;
-  z-index: 50;
-}
-
-#switch {
-  height: 125px;
-  width: 2px;
-  border-radius: 5px;
-  right: -20px;
-  position: relative;
-  cursor: pointer;
-
-}
-
-#bulb {
-  position: relative;
-  right: -5px;
-  top: -3px;
-  cursor: pointer;
-}
-
 .yellow-to-red {
   filter: invert(1);
 }
