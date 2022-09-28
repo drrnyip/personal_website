@@ -40,25 +40,25 @@ const icons = [
     {
         id: "cv",
         description: "Resume",
-        href: "https://drive.google.com/file/d/1acENSe__oldDkhuap7dlmh-YoEC7S5RZ/view",
+        href: import.meta.env.VITE_RESUME,
         img: cvYellow,
     },
     {
         id: "envelope",
         description: "Email",
-        href: "mailto:drrnyip@gmail.com",
+        href: `mailto:${import.meta.env.VITE_EMAIL}`,
         img: mailYellow,
     },
     {
         id: "github",
         description: "GitHub",
-        href: "https://github.com/drrnyip",
+        href: import.meta.env.VITE_GITHUB,
         img: githubYellow,
     },
     {
         id: "linkedin",
         description: "LinkedIn",
-        href: "https://www.linkedin.com/in/drrnyip/",
+        href: import.meta.env.VITE_LINKEDIN,
         img: linkedinYellow,
     },
 

@@ -7,8 +7,8 @@
             Drop me an email and I'll get back to you as soon as I can
         </p>
         <div class="flex flex-col md:flex-row mx-auto ">
-            <a class="mx-auto md:mx-2 mb-4 md:mb-0 border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="mailto:drrnyip@gmail.com" target="_blank">Let's talk</a>
-            <a class="mx-auto md:mx-2 mb-4 md:mb-0 border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" href="https://drive.google.com/file/d/1acENSe__oldDkhuap7dlmh-YoEC7S5RZ/view" target="_blank">Download Resume</a>
+            <a class="mx-auto md:mx-2 mb-4 md:mb-0 border-2 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" :href="mailto" target="_blank">Let's talk</a>
+            <a class="mx-auto md:mx-2 mb-4 md:mb-0 border-2 bg-red-700/30 dark:bg-yellow-500/30 border-red-700 dark:border-yellow-500 hover:border-gray-800 dark:hover:border-gray-50 text-gray-800 dark:text-gray-50 w-full md:w-fit h-fit py-2 px-6 mx-2 bg-transparent font-sans text-xl hover:rounded-xl" :href="resume_url" target="_blank">Download Resume</a>
         </div>
     </div>
 </template>
@@ -18,6 +18,9 @@ import Brushstroke from '../components/Brushstroke.vue';
 const props = defineProps({
     darkMode: Boolean
 })
+
+const resume_url = import.meta.env.VITE_RESUME;
+const mailto = `mailto:${import.meta.env.VITE_EMAIL}`
 
 </script>
 
