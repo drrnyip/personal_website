@@ -2,7 +2,7 @@
   <img class="w-full h-3 mx-auto" src="../assets/brush_yellow.png" :class="{invert: darkMode}" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   darkMode: Boolean
 })

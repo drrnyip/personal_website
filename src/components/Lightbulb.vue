@@ -15,7 +15,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import lightOn from "../assets/lightbulb_on.png";
 import lightOff from "../assets/lightbulb_off.png";

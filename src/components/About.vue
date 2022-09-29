@@ -37,7 +37,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Brushstroke from "../components/Brushstroke.vue";
 const props = defineProps({
     darkMode: Boolean

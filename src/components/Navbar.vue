@@ -48,10 +48,11 @@
     </DisclosurePanel>
   </Disclosure>
 </template>
-<script setup>
+<script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { LightBulbIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { LightBulbIcon as LightBulbSolid } from '@heroicons/vue/solid'
+import NavItems from '../interfaces/NavItems';
 import logoLight from "../assets/logo-light.png";
 import portrait from "../assets/portrait.png";
 
@@ -60,7 +61,7 @@ const props = defineProps({
 })
 const emits = defineEmits(['toggleDarkMode'])
 
-const navigation = [
+const navigation: NavItems[] = [
   { name: 'About', href: 'about', current: true },
   { name: 'Skills', href: 'skills', current: false },
   { name: 'Projects', href: 'projects', current: false },
@@ -68,9 +69,12 @@ const navigation = [
   { name: 'Contact', href: 'contact', current: false },
 ]
 
-function scrollTo(event, target) {
+function scrollTo(event: Event, target: string) {
   event.preventDefault();
-  document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+  const targetElement = document.getElementById(target);
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 </script>

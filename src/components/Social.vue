@@ -16,19 +16,20 @@
     </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue';
+<script setup lang="ts">
+import { Ref, ref, onMounted } from 'vue';
 import mailYellow from "../assets/mail_yellow.png";
 import githubYellow from "../assets/github_yellow.png";
 import linkedinYellow from "../assets/linkedin_yellow.png";
 import cvYellow from "../assets/cv_yellow.png";
+import SocialItems from '../interfaces/SocialItems';
 
 const props = defineProps({
     darkMode: Boolean
 })
 
-const isHovering = ref({});
-const entered = ref(false);
+const isHovering = ref<{ [key: string] : boolean}>({});
+const entered = ref<boolean>(false);
 
 onMounted(() => {
     setTimeout(() => {
@@ -36,7 +37,7 @@ onMounted(() => {
     }, 1000)
 })
 
-const icons = [
+const icons: SocialItems[] = [
     {
         id: "cv",
         description: "Resume",

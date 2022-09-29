@@ -44,8 +44,9 @@
 
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+import ExperienceItems from '../interfaces/ExperienceItems';
 
 const props = defineProps({
     darkMode: Boolean
@@ -57,8 +58,7 @@ let walkalatorPosition = ref('0vw');
 const elevatorHeight = 60;
 const walkalatorWidth = 30;
 
-
-const experiences = [
+const experiences: ExperienceItems[] = [
     {
         title: "Developer",
         employer: "New York Stock Exchange",
@@ -80,8 +80,6 @@ const experiences = [
             "Wrote and implemented unit tests that provided 95% test coverage for entire API layer",
             "Configured, tested and deployed production releases using Kubernetes and Helm and ensured SLA level of 99% uptime/availability",
             "Spearheaded, developed and managed SAML login process for clients and reduced client onboarding time by 60%",
-
-
         ],
         date: '2019 - 2021',
     },
@@ -96,8 +94,8 @@ const experiences = [
     },
 ];
 
-let selectedExperience = ref(experiences[0]);
-let selectedIndex = ref(0);
+let selectedExperience = ref<ExperienceItems>(experiences[0]);
+let selectedIndex = ref<number>(0);
 
 function selected(index) {
     elevatorPosition.value = `${index * elevatorHeight}px`;

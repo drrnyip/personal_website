@@ -27,7 +27,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import code_yellowPng from "../assets/code_yellow.png";
 import book_yellowPng from "../assets/book_yellow.png";
 import database_yellowPng from "../assets/database_yellow.png";

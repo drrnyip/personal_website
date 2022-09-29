@@ -10,7 +10,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
 import brush_yellow from '../assets/brush_yellow.png';
 
