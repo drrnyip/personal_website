@@ -4,7 +4,7 @@
             class="flex w-full flex-col md:flex-row">
             <h2
                 class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
-                About Me</h2>
+                Who dis?</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row my-10">
             <aos-vue animation="fade-down" :once="true" placement="center-bottom" :duration="750" class="flex justify-around flex-row md:flex-col">
@@ -17,7 +17,7 @@
                 <div
                     class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                     <p>
-                        Hi there, my name is Darren Yip, and I'm a full-stack software engineer based in the New England area.
+                        Hi there, my name is Darren Yip, and I'm a software engineer based in the New England area and am currently working at Amazon.
                     </p>
                     <br />
                     <p>

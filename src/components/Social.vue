@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import mailYellow from "../assets/mail_yellow.png";
 import githubYellow from "../assets/github_yellow.png";
 import linkedinYellow from "../assets/linkedin_yellow.png";

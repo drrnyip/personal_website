@@ -21,7 +21,7 @@
                     :delay="750">
 
                     <p class="text-lg md:text-xl lg:text-2xl font-sans text-gray-800 dark:text-gray-50 tracking-wide">
-                        I'm a full-stack developer with experience in building scalable, secure web applications on
+                        I'm a software engineer with experience in building scalable, secure web applications on
                         modern cloud architecture.
                     </p>
                 </aos-vue>

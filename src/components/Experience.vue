@@ -3,7 +3,7 @@
         <aos-vue animation="fade-in" :once="true" placement="center-bottom">
             <h2
                 class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
-                Where I've Worked</h2>
+                Where I've Worked Previously</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-0 justify-around tablist py-5">
             <aos-vue animation="fade-right" :once="true" placement="center-bottom" :duration="750"
