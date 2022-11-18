@@ -1,4 +1,4 @@
-export default interface {
+export default interface SocialItems {
   id: string;
   description: string;
   href: string;

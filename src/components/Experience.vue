@@ -97,7 +97,7 @@ const experiences: ExperienceItems[] = [
 let selectedExperience = ref<ExperienceItems>(experiences[0]);
 let selectedIndex = ref<number>(0);
 
-function selected(index) {
+function selected(index: number) {
     elevatorPosition.value = `${index * elevatorHeight}px`;
     walkalatorPosition.value = `${index * walkalatorWidth}vw`;
     selectedExperience.value = experiences[index];

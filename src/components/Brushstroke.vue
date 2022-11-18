@@ -34,7 +34,7 @@ onMounted(() => {
     resetDraw(initialDelay);
 })
 
-function resetDraw(customDelay) {
+function resetDraw(customDelay?: number) {
     drawCurtain.value = false;
     setTimeout(() => {
         drawCurtain.value = true;

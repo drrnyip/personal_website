@@ -1,4 +1,4 @@
-export default interface {
+export default interface ExperienceItems {
     title: string;
     employer: string;
     description: string[];

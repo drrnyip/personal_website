@@ -65,11 +65,11 @@ const icons: SocialItems[] = [
 
 ]
 
-function setHover(id) {
+function setHover(id: string) {
     isHovering.value[id] = true;
 }
 
-function stopHover(id) {
+function stopHover(id: string) {
     isHovering.value[id] = false;
 }
 
