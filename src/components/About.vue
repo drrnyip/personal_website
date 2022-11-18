@@ -17,7 +17,8 @@
                 <div
                     class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                     <p>
-                        Hi there, my name is Darren Yip, and I'm a software engineer based in the New England area and am currently working at Amazon.
+                        Hi there, my name is Darren Yip, and I'm a software engineer based in the New England area.
+                        At present, I work as a software engineer at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a>.
                     </p>
                     <br />
                     <p>
