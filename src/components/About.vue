@@ -18,14 +18,14 @@
                     class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                     <p>
                         Hi there, my name is Darren Yip, and I'm a software engineer based in the New England area.
-                        At present, I work as a software engineer at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a>.
                     </p>
                     <br />
                     <p>
                         I've been building web applications since 2015 to create engaging and memorable digital
                         experiences. In recent years, I have had the privilege of working for <a
                             href="https://www.checkmate.digital" class="underline" target="_blank">local startups</a>
-                        and <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a>.
+                        and <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a>. 
+                        At present, I work as a software development engineer at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a>.
                     </p>
                     <br />
                     <p>My other passions include music, traveling, reading & RPG games. When not in front of a computer,
