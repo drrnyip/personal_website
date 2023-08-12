@@ -21,17 +21,22 @@
                     </p>
                     <br />
                     <p>
-                        I've been building web applications since 2015 to create engaging and memorable digital
+                        I've been building web applications and various enterprise software since 2015 to create engaging and memorable digital
                         experiences. In recent years, I have had the privilege of working for <a
                             href="https://www.checkmate.digital" class="underline" target="_blank">local startups</a>
                         and <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a>. 
-                        At present, I work as a software development engineer at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a>.
+                        At present, I am employed as a software development engineer at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a> and working on 
+                        <a href ="https://advertising.amazon.com/solutions/products/video-ads?ref_=a20m_us_blg_intvaaa_p_va" class="underline" target="_blank">interactive video ads</a>.
                     </p>
                     <br />
-                    <p>My other passions include music, traveling, reading & RPG games. When not in front of a computer,
-                        I can
-                        usually be found in front of a piano or with my nose in a
-                        book.</p>
+                    <p>When not in front of a computer, I can usually be found reading fantasy novels, 
+                        creating piano covers of songs I listen to, 
+                        and catching up on the latest anime episodes.
+                    </p>
+                    <br/>
+                    <p>
+                        Shows I'm currently following include <i>Jujutsu Kaisen</i>, <i>Spy X Family</i> and <i>Only Murders in the Building</i>. 
+                    </p>
                 </div>
             </aos-vue>
         </div>
