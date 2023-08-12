@@ -30,7 +30,7 @@
                     </p>
                     <br />
                     <p>When not in front of a computer, I can usually be found reading fantasy novels, 
-                        creating piano covers of songs I listen to, 
+                        creating piano covers or playing in church bands, 
                         and catching up on the latest anime episodes.
                     </p>
                     <br/>
