@@ -31,6 +31,7 @@
 import code_yellowPng from "../assets/code_yellow.png";
 import book_yellowPng from "../assets/book_yellow.png";
 import database_yellowPng from "../assets/database_yellow.png";
+import aws_yellowPng from "../assets/aws_yellow.png";
 import tools_yellowPng from "../assets/tools_yellow.png";
 import merge_yellowPng from "../assets/merge_yellow.png";
 import cloud_yellowPng from "../assets/cloud_yellow.png";
@@ -42,7 +43,7 @@ const skills = [
   {
     name: 'Languages',
     description:
-      'HTML5, JavaScript, TypeScript, bash, GraphQL',
+      'HTML5, JavaScript, TypeScript, Java, bash, GraphQL',
     id: 'code',
     img: code_yellowPng,
   },
@@ -56,14 +57,21 @@ const skills = [
   {
     name: 'Databases',
     description:
-      'SQL, PostgreSQL, MongoDB',
+      'SQL, PostgreSQL, MongoDB, DynamoDB',
     id: 'database',
     img: database_yellowPng,
   },
   {
-    name: 'Cloud Tools',
+    name: 'AWS',
     description:
-      'Docker, Kubernetes, Helm, AWS, GCP',
+      'SQS, ECS/Fargate, Lambda, S3, EC2, CloudFormation, Cloudwatch',
+    id: 'cloud',
+    img: aws_yellowPng,
+  },
+  {
+    name: 'Cloud / Containerization',
+    description:
+      'Docker, Kubernetes, Helm, Google Cloud Platform (GCP)',
     id: 'cloud',
     img: cloud_yellowPng,
   },
@@ -74,13 +82,13 @@ const skills = [
     id: 'merge',
     img: merge_yellowPng,
   },
-  {
-    name: 'Other Tools',
-    description:
-      'Linux, Firebase, Adobe Photoshop',
-    id: 'tools',
-    img: tools_yellowPng,
-  },
+  // {
+  //   name: 'Other Tools',
+  //   description:
+  //     'Linux, Firebase, Adobe Photoshop',
+  //   id: 'tools',
+  //   img: tools_yellowPng,
+  // },
 ]
 </script>
 
