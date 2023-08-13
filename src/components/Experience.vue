@@ -23,8 +23,9 @@
                     <div class="arrow rotate-180" @click="decrement">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
-                    <h1 class="text-center text-2xl py-2">
-                        {{ experiences[activeIndex].shortenedEmployer }}</h1>
+                    <h1 class="text-center text-lg py-2">
+                        {{ experiences[activeIndex].employer }}
+                    </h1>
                     <div class="arrow" @click="increment">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
@@ -162,6 +163,6 @@ function decrement() {
 }
 
 .yellow-to-red {
-  filter: invert(1) hue-rotate(-200deg)
+    filter: invert(1) hue-rotate(-200deg)
 }
 </style>
