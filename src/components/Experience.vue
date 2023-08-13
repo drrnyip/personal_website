@@ -8,36 +8,43 @@
         <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-0 justify-around tablist py-5">
             <aos-vue animation="fade-right" :once="true" placement="center-bottom" :duration="750"
                 class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
+                <!-- Desktop view -->
                 <ul
                     class="hidden md:flex md:flex-row justify-around w-[80vw] sm:w-[85vw] md:w-full md:flex-col md:border-b-0 md:border-l-4 md:mr-5 md:pr-5">
                     <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
                         class="hidden md:block box-border cursor-pointerfont-sans h-[60px] w-[60vw] md:w-full text-center md:text-left pt-2 px-4 md:py-4 transition-transform duration-500 ease-in-out"
                         :class="{ 'bg-red-700/20 dark:bg-yellow-500/20': selectedIndex == index }" @click="selected(index)">
-                        <h3 class="font-sans leading-none md:leading-normal md:w-[25vw] lg:w-[15vw]">{{ experience.employer
-                        }}</h3>
+                        <h3 class="font-sans leading-none md:leading-normal md:w-[25vw] lg:w-[15vw] whitespace-nowrap">{{
+                            experience.employer }}</h3>
                     </li>
                 </ul>
+                <div id="elevator"
+                    class="absolute hidden md:block bg-red-700 dark:bg-yellow-500 h-[60px] w-1 transition-transform duration-500 ease-in-out"
+                    :style="{ transform: `translateY(${elevatorPosition})` }">
+                </div>
+                <!-- Desktop view end -->
                 <br />
 
+                <!-- Mobile view -->
                 <div class="md:hidden flex h-fit w-[82vw] justify-between">
                     <div class="arrow rotate-180" @click="decrement">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
-                    <h1 class="text-center text-lg py-2 whitespace-nowrap">
+                    <h1 class="text-center text-xl font-medium py-2 whitespace-nowrap">
                         {{ experiences[activeIndex].employer }}
                     </h1>
                     <div class="arrow" @click="increment">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
                 </div>
-                <div id="elevator"
-                    class="absolute hidden md:block bg-red-700 dark:bg-yellow-500 h-[60px] w-1 transition-transform duration-500 ease-in-out"
-                    :style="{ transform: `translateY(${elevatorPosition})` }"></div>
+
                 <div id="runway" class="absolute block md:hidden bg-white h-1 w-[80vw]"
                     :style="{ transform: `translateY(60px)` }"></div>
                 <div id="walkalator"
                     class="absolute block md:hidden bg-red-700 dark:bg-yellow-500 w-[20vw] h-1 transition-transform duration-500 ease-in-out"
-                    :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }"></div>
+                    :style="{ transform: `translateY(60px) translateX(${walkalatorPosition})` }">
+                </div>
+                <!-- Mobile view end -->
             </aos-vue>
             <br class="block md:hidden my-10" />
             <div class="w-[80vw] md:w-full">
