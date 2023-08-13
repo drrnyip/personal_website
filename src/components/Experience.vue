@@ -23,8 +23,8 @@
                     <div class="arrow rotate-180" @click="decrement">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
-                    <h1 class="text-center text-lg sm:text-2xl py-2">
-                        {{ experiences[activeIndex].employer }}</h1>
+                    <h1 class="text-center text-2xl py-2">
+                        {{ experiences[activeIndex].shortenedEmployer }}</h1>
                     <div class="arrow" @click="increment">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
@@ -79,6 +79,7 @@ const experiences: ExperienceItems[] = [
     {
         title: "Software Development Engineer",
         employer: "Amazon",
+        shortenedEmployer: "Amazon",
         description: [
             "Scaled up existing interactive video ads delivery service in preparation for Thursday Night Football expected traffic of over 50,000 transactions-per-second (TPS)",
             "Implemented caching mechanism using GuavaCache to decrease reliance on downstream services and decreased overall latency by at least 30%.",
@@ -91,6 +92,7 @@ const experiences: ExperienceItems[] = [
     {
         title: "Developer",
         employer: "New York Stock Exchange",
+        shortenedEmployer: "NYSE",
         description: [
             "Worked with cloud and infrastructure teams to integrate into secured internal Amazon Web Services (AWS) cloud from existing Google Cloud Platform (GCP) servers",
             "Performed major upgrade to Vue 3 by rewriting all components to use Vue 3's Composition API, reducing bundle size by 50% and thereby significantly improving loading speeds and web performance",
@@ -101,6 +103,7 @@ const experiences: ExperienceItems[] = [
     {
         title: "Senior Engineer",
         employer: "Hercules Solutions",
+        shortenedEmployer: "Hercules",
         description: [
             "Worked in two-man engineering team to create an enterprise-level secure, scalable fintech platform built on cloud microservice architecture",
             "Proposed, spearheaded and developed prototype features based on client feedback and integrated into future releases",
@@ -115,6 +118,7 @@ const experiences: ExperienceItems[] = [
     {
         title: "Software Developer",
         employer: "Checkmate Digital",
+        shortenedEmployer: "Checkmate",
         description: [
             "Collaborated with UI/UX designers and clients to implement bespoke Angular 2 web applications for clients across myriad industries",
             "Coached and pair-programmed with junior web developers to help sharpen existing skills and learn new ones",
