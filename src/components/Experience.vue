@@ -160,4 +160,8 @@ function decrement() {
     transform: translateX(-20px);
     transition: transform 1s ease-in-out;
 }
+
+.yellow-to-red {
+  filter: invert(1) hue-rotate(-200deg)
+}
 </style>
