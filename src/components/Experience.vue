@@ -23,7 +23,7 @@
                     <div class="arrow rotate-180" @click="decrement">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
-                    <h1 class="text-center text-lg py-2">
+                    <h1 class="text-center text-lg py-2 whitespace-nowrap">
                         {{ experiences[activeIndex].employer }}
                     </h1>
                     <div class="arrow" @click="increment">
