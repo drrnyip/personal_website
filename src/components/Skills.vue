@@ -64,7 +64,7 @@ const skills = [
   {
     name: 'AWS',
     description:
-      'SQS, ECS/Fargate, Lambda, S3, EC2, CloudFormation, Cloudwatch',
+      'SQS, ECS/Fargate, Lambda, S3, EC2, CloudFormation, Cloudwatch, IAM, KMS',
     id: 'cloud',
     img: aws_yellowPng,
   },
