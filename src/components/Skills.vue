@@ -50,16 +50,23 @@ const skills = [
   {
     name: 'Libraries / Frameworks',
     description:
-      'Vue.js, Node.js, Express.js, gRPC, Passport.js, Mocha.js, Bootstrap, TailwindCSS, Angular 2',
+      'Vue.js, Node.js, Express.js, gRPC, Passport.js, Mocha.js, Bootstrap, TailwindCSS, Angular 2, React.js, Guice',
     id: 'book',
     img: book_yellowPng,
   },
   {
     name: 'Databases',
     description:
-      'SQL, PostgreSQL, MongoDB, DynamoDB',
+      'SQL, PostgreSQL, DynamoDB, MongoDB',
     id: 'database',
     img: database_yellowPng,
+  },
+  {
+    name: 'Cloud / Containerization',
+    description:
+      'Docker, Kubernetes, Helm, Firebase, Google Cloud Platform (GCP)',
+    id: 'cloud',
+    img: cloud_yellowPng,
   },
   {
     name: 'AWS',
@@ -67,13 +74,6 @@ const skills = [
       'SQS, ECS/Fargate, Lambda, S3, EC2, CloudFormation, Cloudwatch, IAM, KMS, Elasticache',
     id: 'aws',
     img: aws_yellowPng,
-  },
-  {
-    name: 'Cloud / Containerization',
-    description:
-      'Docker, Kubernetes, Helm, Google Cloud Platform (GCP)',
-    id: 'cloud',
-    img: cloud_yellowPng,
   },
   {
     name: 'Version Control',
