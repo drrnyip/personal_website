@@ -35,7 +35,7 @@
                     </p>
                     <br/>
                     <p>
-                        Shows I'm currently following include <i>Jujutsu Kaisen</i>, <i>Spy X Family</i> and <i>Only Murders in the Building</i>. 
+                        Shows I'm currently following include <i>Jujutsu Kaisen</i>, <i>Spy x Family</i> and <i>Only Murders in the Building</i>. 
                     </p>
                 </div>
             </aos-vue>
