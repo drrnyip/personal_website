@@ -89,8 +89,8 @@ const experiences: ExperienceItems[] = [
         employer: "Amazon",
         shortenedEmployer: "Amazon",
         description: [
-            "Scaled up existing interactive video ads delivery service in preparation for Thursday Night Football expected traffic of over 50,000 transactions-per-second (TPS)",
-            "Implemented caching mechanism using Elasticache to decrease reliance on downstream services and decreased overall latency by at least 30%.",
+            "Successfully scaled up existing interactive video ads delivery service in preparation for Thursday Night Football expected traffic of over 50,000 transactions-per-second (TPS)",
+            "Implemented caching mechanism using AWS Elasticache to decrease reliance on downstream services and decreased overall latency by at least 30%.",
             "Prepared and executed load tests using TestNG to ensure service reliability during expected peak traffic",
             "R&D on possible ways to introduce interactive ads onto other video platforms",
             "Successfully mitigated high-severity production issues while on-call and proactively monitored systems using Cloudwatch dashboards and logs ",
