@@ -43,7 +43,7 @@ const skills = [
   {
     name: 'Languages',
     description:
-      'JavaScript, TypeScript, Java, HTML/CSS, bash, GraphQL',
+      'TypeScript, Java, HTML/CSS, bash, GraphQL, Javascript',
     id: 'code',
     img: code_yellowPng,
   },

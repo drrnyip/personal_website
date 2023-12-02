@@ -95,7 +95,7 @@ const experiences: ExperienceItems[] = [
             "R&D on possible ways to introduce interactive ads onto other video platforms",
             "Successfully mitigated high-severity production issues while on-call and proactively monitored systems using Cloudwatch dashboards and logs ",
         ],
-        date: '2022 - Current',
+        date: '2022 - 2023',
     },
     {
         title: "Developer",

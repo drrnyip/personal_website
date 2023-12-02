@@ -23,19 +23,13 @@
                     <p>
                         I've been building web applications and various enterprise software since 2015 to create engaging and memorable digital
                         experiences. In recent years, I have had the privilege of working for <a
-                            href="https://www.checkmate.digital" class="underline" target="_blank">local startups</a>
-                        and <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a>. 
-                        At present, I am employed as a software development engineer at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a> and working on 
-                        <a href ="https://advertising.amazon.com/solutions/products/video-ads?ref_=a20m_us_blg_intvaaa_p_va" class="underline" target="_blank">interactive video ads</a>.
+                            href="https://www.checkmate.digital" class="underline" target="_blank">local startups</a>,
+                             <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a> and at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a>.
                     </p>
                     <br />
                     <p>When not in front of a computer, I can usually be found reading fantasy novels, 
                         creating piano covers or playing in church bands, 
                         and catching up on the latest anime episodes.
-                    </p>
-                    <br/>
-                    <p>
-                        Shows I'm currently following include <i>Jujutsu Kaisen</i>, <i>Spy x Family</i> and <i>Only Murders in the Building</i>. 
                     </p>
                 </div>
             </aos-vue>
