@@ -69,7 +69,7 @@ onMounted(() => {
     }, 1500)
 })
 
-function getRandomHeadline() {
+function getRandomHeadline(): String {
     let index = Math.floor(Math.random() * ((headlines.length - 1) + 1));
     if (index == currentHeadlineIndex) return getRandomHeadline();
     currentHeadlineIndex = index;
