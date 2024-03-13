@@ -57,7 +57,7 @@ const headlines = [
     " document my code",
     " work well in teams",
     "'ve worked at startups",
-    "'ve worked at Big Tech",
+    "'ve worked in Big Tech",
 ]
 
 let typewriter: any;
