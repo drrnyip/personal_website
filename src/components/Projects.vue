@@ -2,7 +2,7 @@
     <div id="projects" class="py-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-50">
         <aos-vue animation="fade-in" :once="true" placement="center-bottom" :duration="750">
             <h2
-                class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
+                class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
                 Things I've Built
             </h2>
         </aos-vue>
@@ -21,10 +21,10 @@
                     :class="{ 'md:text-right': index % 2 == 0, 'md:text-left': index % 2 != 0 }">
                     <a :href="project.href" target="_blank">
                         <h1
-                            class="text-2xl text-red-700 dark:text-yellow-500 font-sans tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">
+                            class="text-2xl text-red-700 dark:text-yellow-500 font-mono tracking-wider mt-4 md:mt-10 mb-2 md:mb-6">
                             {{ project.name }}</h1>
                     </a>
-                    <p class="w-full md:w-[120%] text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900"
+                    <p class="w-full md:w-[120%] font-sans text-md py-4 px-6 rounded text-gray-800 dark:text-gray-50 bg-gray-200 dark:bg-gray-900"
                         :class="{ 'md:ml-[-20%]': index % 2 == 0, 'md:mr-[-20%]': index % 2 != 0 }">
                         {{ project.description }}</p>
                     <div class="deets relative flex flex-row justify-between px-0 md:px-2 mx-2 md:mx-0 mt-2 md:mt-4"

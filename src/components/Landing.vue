@@ -6,7 +6,7 @@
                 <aos-vue animation="fade-down" :once="true" placement="top-bottom" :duration="750" easing="ease"
                     :delay="250">
                     <h3
-                        class="text-md sm:text-lg md:text-xl lg:text-2xl font-sans uppercase text-red-700 dark:text-yellow-500 tracking-widest font-semibold">
+                        class="text-md sm:text-lg md:text-xl lg:text-2xl font-mono uppercase text-red-700 dark:text-yellow-500 tracking-widest font-semibold">
                         Hello, my name is Darren</h3>
                 </aos-vue>
                 <br />

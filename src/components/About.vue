@@ -3,7 +3,7 @@
         <aos-vue animation="fade-in" :once="true" placement="center-bottom" :duration="750"
             class="flex w-full flex-col md:flex-row">
             <h2
-                class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-sans text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
+                class="text-center md:text-left text-3xl md:text-3xl lg:text-4xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
                 Who dis?</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row my-10">
@@ -27,8 +27,8 @@
                              <a class="underline" href="https://www.nyse.com/index" target="_blank">on Wall Street</a> and at <a href="https://www.amazon.com" class="underline" target="_blank">Amazon</a>.
                     </p>
                     <br />
-                    <p>When not in front of a computer, I can usually be found reading fantasy novels, 
-                        creating piano covers or playing in church bands, 
+                    <p>When not playing RPG games or hunting Koroks in ToTK, I can usually be found reading fantasy novels,
+                        creating piano covers / playing in church bands, 
                         and catching up on the latest anime episodes.
                     </p>
                 </div>
