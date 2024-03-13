@@ -19,12 +19,15 @@ const props = defineProps({
     style: {
         type: String,
         default: 'highlight', // 'highlight' or 'stroke'
+    },
+    delay: {
+        type: Number,
+        default: 250 // milliseconds
     }
 })
 
 let drawCurtain = ref(false);
 let initialDelay = 2000;
-let delay = 250; // milliseconds
 
 watch(() => props.darkMode, async (curr, prev) => {
     resetDraw();
@@ -38,7 +41,7 @@ function resetDraw(customDelay?: number) {
     drawCurtain.value = false;
     setTimeout(() => {
         drawCurtain.value = true;
-    }, customDelay ? customDelay : delay)
+    }, customDelay ? customDelay : props.delay)
 }
 </script>
 

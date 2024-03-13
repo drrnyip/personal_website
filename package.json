@@ -12,6 +12,7 @@
     "@heroicons/vue": "^1.0.6",
     "@vueuse/core": "^9.2.0",
     "aos-vue": "^0.0.5",
+    "typewriter-effect": "^2.21.0",
     "vue": "^3.2.25"
   },
   "devDependencies": {
