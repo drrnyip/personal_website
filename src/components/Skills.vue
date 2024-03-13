@@ -15,9 +15,9 @@
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
                 <img class="h-8 lg:h-12" :src="skill.img" :class="{ 'yellow-to-red': !darkMode }" />
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
+              <p class="ml-16 text-lg leading-6 font-sans tracking-widest font-medium text-gray-800 dark:text-gray-50">{{ skill.name }}</p>
             </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-800 dark:text-gray-50 ">
+            <dd class="mt-2 ml-16 font-sans tracking-wider text-base text-gray-800 dark:text-gray-50 ">
               {{ skill.description }}
             </dd>
           </div>
