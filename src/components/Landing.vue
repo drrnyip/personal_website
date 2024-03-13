@@ -71,7 +71,7 @@ onMounted(() => {
 
     setTimeout(() => {
         changeHeadline(0);
-    }, 1500)
+    }, 500)
 })
 
 function getRandomHeadline(): String {
