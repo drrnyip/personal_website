@@ -52,4 +52,8 @@ function toggleDarkMode() {
 </script>
 
 <style>
+body, nav, div {
+  /* This is for transitioning the background smoothly when toggling dark mode */
+  transition: background 0.4s; 
+}
 </style>

@@ -89,7 +89,6 @@ function resetDraw(customDelay?: number) {
     filter: invert(1) hue-rotate(-220deg);
 }
 
-
 @media only screen and (max-width: 480px) {
     .highlight {
         top: 12% !important;

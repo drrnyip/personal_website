@@ -1,15 +1,17 @@
 <template>
-    <div id="social" class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:left-14 cursor-pointer"
+    <div id="social"
+        class="flex flex-row justify-center w-full md:w-fit md:flex-col md:fixed absolute md:bottom-20 md:left-14 cursor-pointer"
         :class="{ entry: entered }">
         <div v-for="icon in icons" :key="icon.id"
             class="icon relative font-sans tracking-wider mb-6 mx-4 md:mx-0 hover:scale-125 transition-transform"
             @mouseenter="setHover(icon.id)" @mouseleave="stopHover(icon.id)">
             <a :alt="icon.id" :href="icon.href" class="" target="_blank">
-                <img :src="icon.img" class="h-6 w-6" :class="{'yellow-to-red': !darkMode}" />
+                <img :src="icon.img" class="h-6 w-6" :class="{ 'yellow-to-red': !darkMode }" />
             </a>
-            <p class="tooltip absolute cursor-pointer hidden md:block text-xs text-gray-800 dark:text-gray-50" :class="{ show: isHovering[icon.id] }">{{
-                    icon.description
-            }}</p>
+            <p class="tooltip absolute cursor-pointer hidden md:block text-xs text-gray-800 dark:text-gray-50"
+                :class="{ show: isHovering[icon.id] }">{{
+            icon.description
+        }}</p>
         </div>
         <div id="vertical" class="hidden md:block"></div>
         <!-- <div id="horizontal" class="block md:hidden"></div> -->
@@ -28,7 +30,7 @@ const props = defineProps({
     darkMode: Boolean
 })
 
-const isHovering = ref<{ [key: string] : boolean}>({});
+const isHovering = ref<{ [key: string]: boolean }>({});
 const entered = ref<boolean>(false);
 
 onMounted(() => {
@@ -126,6 +128,6 @@ function stopHover(id: string) {
 }
 
 .yellow-to-red {
-  filter: invert(1) hue-rotate(-200deg)
+    filter: invert(1) hue-rotate(-200deg)
 }
 </style>
