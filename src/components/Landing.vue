@@ -1,7 +1,7 @@
 <template>
     <div id="landing"
         class="flex flex-col justify-start h-full min-h-[95vh] w-full md:text-left bg-gray-100 dark:bg-gray-800">
-        <div class="absolute top-[25%] md:top-[30%] lg:top-[35%] px-4 sm:px-12 md:px-28 lg:px-36 xl:px-48">
+        <div class="absolute top-[25%] md:top-[30%] lg:top-[35%] px-4 sm:px-12 md:px-28 lg:px-36 xl:px-48 cursor-pointer" @click="changeHeadline()">
             <Brushstroke :darkMode="darkMode" :delay="getBrushstrokeDelay()">
                 <aos-vue animation="fade-down" :once="true" placement="top-bottom" :duration="750" easing="ease"
                     :delay="250">
@@ -22,7 +22,7 @@
                     <p
                         class="text-md sm:text-lg md:text-xl lg:text-2xl font-sans text-gray-800 dark:text-gray-50 tracking-wide">
                         I'm a software engineer with extensive experience in building scalable software solutions on
-                        modern cloud architecture. 
+                        modern cloud architecture.
                     </p>
                 </aos-vue>
             </Brushstroke>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, watch } from "vue";
+import { onMounted, watch, ref } from "vue";
 import Brushstroke from "../components/Brushstroke.vue";
 import Typewriter from 'typewriter-effect/dist/core';
 
@@ -40,6 +40,7 @@ const props = defineProps({
 })
 
 let currentHeadlineIndex: number = 0;
+let typewriterInProgress: boolean = false;
 
 watch(() => props.darkMode, (curr, prev) => {
     changeHeadline();
@@ -80,6 +81,8 @@ function getRandomHeadline(): String {
 }
 
 function changeHeadline(index?: number) {
+    if (typewriterInProgress) return;
+    typewriterInProgress = true;
     let headline;
     if (index != undefined) {
         headline = headlines[index];
@@ -87,10 +90,12 @@ function changeHeadline(index?: number) {
     } else {
         headline = getRandomHeadline();
     }
-    typewriter.deleteAll(10);
-    typewriter.typeString(headline);
-    typewriter.pauseFor(500);
-    typewriter.start();
+    typewriter
+        .deleteAll(10)
+        .typeString(headline)
+        .pauseFor(500)
+        .start()
+        .callFunction(() => typewriterInProgress = false)
 }
 
 function getBrushstrokeDelay(): number {
