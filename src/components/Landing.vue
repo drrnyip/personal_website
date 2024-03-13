@@ -55,7 +55,6 @@ const headlines = [
     " love Typescript",
     // " always test my code",
     " write clean code",
-    " test my code",
     " document my code",
     " work well in teams",
     "'ve worked at startups",
