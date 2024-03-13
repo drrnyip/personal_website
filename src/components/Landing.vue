@@ -48,11 +48,11 @@ watch(() => props.darkMode, (curr, prev) => {
 
 const headlines = [
     " create websites",
-    "'m a Full Stack Developer",
-    " love Typescript",
-    " built this with Vue.js",
     " develop software",
+    "'m a Full Stack Developer",
+    " built this with Vue.js",
     " design scalable systems",
+    " love Typescript",
     " always test my code",
     " document my code",
     " work well in teams",
@@ -80,6 +80,15 @@ function getRandomHeadline(): String {
     return headlines[index];
 }
 
+function getNextHeadline(): String {
+    if (headlines[currentHeadlineIndex + 1]) {
+        currentHeadlineIndex++;
+        return headlines[currentHeadlineIndex];
+    }
+    currentHeadlineIndex = 0;
+    return headlines[0];
+}
+
 function changeHeadline(index?: number) {
     if (typewriterInProgress) return;
     typewriterInProgress = true;
@@ -88,7 +97,8 @@ function changeHeadline(index?: number) {
         headline = headlines[index];
         currentHeadlineIndex = index;
     } else {
-        headline = getRandomHeadline();
+        // headline = getRandomHeadline();
+        headline = getNextHeadline();
     }
     typewriter
         .deleteAll(10)
