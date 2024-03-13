@@ -47,8 +47,8 @@ watch(() => props.darkMode, (curr, prev) => {
 
 const headlines = [
     " create websites",
-    " am a Full Stack <br>Developer",
-    " love <br>Typescript",
+    "'m a Full Stack Developer",
+    " love Typescript",
     " built this with Vue.js",
     " develop software",
     " design scalable systems",
