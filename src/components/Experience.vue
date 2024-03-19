@@ -12,7 +12,7 @@
                 <ul
                     class="hidden md:flex md:flex-row justify-around w-[80vw] sm:w-[85vw] md:w-full md:flex-col md:border-b-0 md:border-l-4 md:mr-5 md:pr-5">
                     <li v-for="(experience, index) in experiences" :key="`${experience.title}_${experience.employer}`"
-                        class="hidden md:block box-border cursor-pointerfont-sans h-[60px] w-[60vw] md:w-full text-center md:text-left pt-2 px-4 md:py-4 transition-transform duration-500 ease-in-out"
+                        class="hidden md:block box-border cursor-pointer font-sans h-[60px] w-[60vw] md:w-full text-center md:text-left pt-2 px-4 md:py-4 transition-transform duration-500 ease-in-out"
                         :class="{ 'bg-red-700/20 dark:bg-yellow-500/20': selectedIndex == index }"
                         @click="selected(index)">
                         <h3 class="font-sans leading-none md:leading-normal md:w-[25vw] lg:w-[15vw] whitespace-nowrap">
