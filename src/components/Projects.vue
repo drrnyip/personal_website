@@ -8,7 +8,7 @@
         </aos-vue>
         <div class="flex flex-col mt-8">
             <div v-for="(project, index) in projects" :key="project.name"
-                class="project flex flex-col md:flex-row mb-12">
+                class="project flex flex-col md:flex-row mb-12 max-w-fit justify-end">
                 <aos-vue v-if="index % 2 == 0" animation="fade-right" :once="true" placement="center-bottom"
                     :duration="750"
                     class="screenshot rounded border-cyan-400 mix-blend-difference hover:mix-blend-saturate dark:border-yellow-500 border-2 mx-6 md:mx-2 hidden md:block md:basis-3/5 flex-1 cursor-pointer">
