@@ -33,7 +33,7 @@
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
                     </div>
                     <h1 class="text-center text-xl font-medium py-2 whitespace-nowrap">
-                        {{ experiences[activeIndex].employer }}
+                        {{ experiences[activeIndex].shortenedEmployer }}
                     </h1>
                     <div class="arrow" @click="increment">
                         <img class="h-12" :src="RightChevron" :class="{ 'yellow-to-red': !darkMode }" />
@@ -107,7 +107,7 @@ const experiences: ExperienceItems[] = [
         employer: "New York Stock Exchange",
         shortenedEmployer: "NYSE",
         description: [
-            "Played pivotal role in helping Hercules Solutions get acquired by NYSE",
+            "Played pivotal role in helping Hercules Solutions get acquired by the New York Stock Exchange",
             "Worked with cloud and infrastructure teams to integrate into secured internal Amazon Web Services (AWS) cloud from existing Google Cloud Platform (GCP) servers",
             "Performed major upgrade to Vue 3 by rewriting all components to use Vue 3's Composition API, reducing bundle size by 50% and thereby significantly improving loading speeds and web performance",
             "Authored runbook to facilitate onboarding new team members, cutting down onboarding time in half",
