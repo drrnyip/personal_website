@@ -39,6 +39,11 @@ function toggleHover(val: boolean) {
 </script>
 
 <style scoped>
+#scrollup {
+    /* This time should match the transition time in App.vue for the background */
+    transition: filter 0.4s; 
+}
+
 .yellow-to-red {
     filter: invert(1) hue-rotate(-200deg)
 }
