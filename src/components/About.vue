@@ -3,7 +3,7 @@
         <aos-vue animation="fade-in" :once="true" placement="center-bottom" :duration="750"
             class="flex w-full flex-col md:flex-row justify-center">\
             <h2
-                class="text-center text-3xl md:text-3xl lg:text-4xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
+                class="text-center text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
                 Who dis?</h2>
         </aos-vue>
         <div class="flex flex-col md:flex-row my-10">

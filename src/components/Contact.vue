@@ -1,7 +1,7 @@
 <template>
     <div id="contact" class="flex flex-col mx-auto w-full md:w-[50vw] px-4 md:px-0 text-center h-fit justify-center mb-12">
         <Brushstroke :darkMode="darkMode" :style="'stroke'">
-        <h2 class="text-3xl md:text-3xl lg:text-4xl w-fit mx-auto font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4">Get In Touch</h2>
+        <h2 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl w-fit mx-auto font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4">Get In Touch</h2>
             </Brushstroke>
         <p class="text-base md:text-md lg:text-lg font-sans text-gray-800 dark:text-gray-50 tracking-wide mb-6">
             Drop me an email and I'll get back to you as soon as I can

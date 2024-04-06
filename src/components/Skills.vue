@@ -4,7 +4,7 @@
     <div class="max-w-7xl px-4 md:px-0 bg-green">
       <aos-vue animation="fade-in" :once="true" placement="center-bottom">
         <h2
-          class="text-center text-3xl md:text-3xl lg:text-4xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
+          class="text-center text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
           Skills</h2>
       </aos-vue>
       <aos-vue animation="fade-up" :once="true" placement="center-bottom" :duration="750" class="mt-10">
