@@ -51,7 +51,7 @@
             <br class="block md:hidden my-10" />
             <div class="w-[80vw] md:w-full">
                 <aos-vue animation="fade-up" :once="true" placement="center-bottom" :duration="750"
-                    class="flex flex-col h-fit min-h-[55vh] md:min-h-[50vh] lg:min-h-[40vh] w-fit md:w-[50vw] p-2">
+                    class="flex flex-col h-fit min-h-[65vh] w-fit md:w-[50vw] p-2">
                     <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title
                             }}</span> |
                         <span class="font-medium ml-2 text-red-700 dark:text-yellow-500">{{ selectedExperience.employer
