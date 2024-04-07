@@ -18,7 +18,7 @@
                     class="copy m-12 md:m4 text-center md:text-left font-sans text-lg md:text-xl lg:text-2xl text-gray-800 dark:text-gray-50 tracking-wide">
                     <p>
                         👋 Hi there, my name is Darren Yip, and I'm a software engineer who enjoys building software and
-                        problem-solving. I love to learn, value feedback and work well in teams.
+                        problem-solving. 
                     </p>
                     <br />
                     <p>
