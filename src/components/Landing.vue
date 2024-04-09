@@ -1,7 +1,7 @@
 <template>
     <div id="landing"
-        class="flex flex-col justify-start h-full min-h-[95vh] w-full md:text-left bg-gray-100 dark:bg-gray-800">
-        <div class="absolute top-[25%] md:top-[30%] lg:top-[35%] px-4 sm:px-12 md:px-28 lg:px-36 xl:px-48 cursor-pointer" @click="changeHeadline()">
+        class="flex flex-col overflow-x-hidden justify-start text-center md:text-left h-full min-h-[95vh] w-full max-w-[90vw] md:text-left bg-gray-100 dark:bg-gray-800">
+        <div class="absolute top-[25%] md:top-[30%] lg:top-[35%] px-2 sm:px-12 md:px-28 lg:px-36 xl:px-48 cursor-pointer" @click="changeHeadline()">
             <Brushstroke :darkMode="darkMode" :delay="getBrushstrokeDelay()">
                 <aos-vue animation="fade-down" :once="true" placement="top-bottom" :duration="750" easing="ease"
                     :delay="250">

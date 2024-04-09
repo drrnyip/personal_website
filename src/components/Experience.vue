@@ -1,13 +1,13 @@
 <template>
-    <div id="experience" class="py-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-50">
-        <aos-vue animation="fade-in" :once="true" placement="center-bottom">
+    <div id="experience" class="py-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-50 max-w-[90vw]">
+        <aos-vue animation="fade-in" :once="true" placement="center-bottom" class="w-full">
             <h2
                 class="text-center text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-mono text-red-700 dark:text-yellow-500 tracking-widest font-semibold my-4 px-4">
                 Where I've Worked</h2>
         </aos-vue>
-        <div class="flex flex-col md:flex-row h-fit w-fit mx-6 md:mx-0 justify-around tablist py-5">
+        <div class="flex flex-col md:flex-row h-fit w-full mx-2 md:mx-6 md:mx-0 justify-center tablist py-5">
             <aos-vue animation="fade-right" :once="true" placement="center-bottom" :duration="750"
-                class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer">
+                class="flex flex-row md:flex-col basis-2/6 tracking-wide cursor-pointer max-w-xl">
                 <!-- Desktop view -->
                 <ul
                     class="hidden md:flex md:flex-row justify-around w-[80vw] sm:w-[85vw] md:w-full md:flex-col md:border-b-0 md:border-l-4 md:mr-5 md:pr-5">
@@ -17,7 +17,7 @@
                         @click="selected(index)">
                         <h3 class="font-sans leading-none md:leading-normal md:w-[25vw] lg:w-[15vw] whitespace-nowrap">
                             {{
-            experience.employer }}</h3>
+                                experience.employer }}</h3>
                     </li>
                 </ul>
                 <div id="elevator"
@@ -49,18 +49,25 @@
                 <!-- Mobile view end -->
             </aos-vue>
             <br class="block md:hidden my-10" />
-            <div class="w-[80vw] md:w-full">
+            <div class="w-fit">
                 <aos-vue animation="fade-up" :once="true" placement="center-bottom" :duration="750"
-                    class="flex flex-col h-fit min-h-[65vh] w-fit md:w-[50vw] p-2">
-                    <h3 class="font-sans text-xl tracking-wider"><span class="mr-2">{{ selectedExperience.title
-                            }}</span> |
-                        <span class="font-medium ml-2 text-red-700 dark:text-yellow-500">{{ selectedExperience.employer
-                            }}</span>
+                    class="flex flex-col h-fit w-fit md:w-[50vw] p-2">
+                    <h3 class="font-sans text-xl tracking-wider mr-2">
+                        {{ selectedExperience.title }}
+                        <span class="hidden md:inline-block">|</span>
+                        <span class="hidden md:inline-block font-medium md:ml-2 text-red-700 dark:text-yellow-500">
+                            {{ selectedExperience.employer }}
+                        </span>
+                    </h3>
+
+                    <h3 class="inline-block md:hidden font-medium md:ml-2 text-red-700 dark:text-yellow-500">
+                        {{ selectedExperience.employer }}
                     </h3>
                     <p class="italic">{{ selectedExperience.date }}</p>
                     <br />
-                    <ul class="">
-                        <li v-for="desc in selectedExperience.description" :key="desc" class="list-item mb-2">{{ desc }}
+                    <ul id="list" class="h-fit">
+                        <li v-for="desc in selectedExperience.description" :key="desc"
+                            class="transition-all overflow-hidden list-item mb-2 max-w-[70vw]">{{ desc }}
                         </li>
                     </ul>
                 </aos-vue>
@@ -177,4 +184,5 @@ function decrement() {
 .yellow-to-red {
     filter: invert(1) hue-rotate(-200deg)
 }
+
 </style>
